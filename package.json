@@ -1,0 +1,39 @@
+{
+  "name": "help-wizzard",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "copy-backend-stuff": "cp ./src/.htaccess ./dist || true",
+    "copy-assets": "cp -r ./assets/* ./dist || true",
+    "serve": "npm run clean && mkdir dist && npm run copy-assets &&  parcel ./src/index.html --dist-dir dist --port 4190",
+    "prebuild": "if not exist dist mkdir dist && npm run copy-assets",
+    "build": "npm run copy-assets && parcel build ./src/index.html --public-url .",
+    "clean": "rm ./.cache -rf && rm ./.parcel-cache -rf && rm ./dist -rf",
+    "deploy:clean": "rm dist.zip -f && rm ./dist -rf",
+    "deploy:prepare": "npm run deploy:clean && if not exist dist mkdir dist",
+    "zip": "@powershell Compress-Archive -Path ./dist/* -DestinationPath dist.zip",
+    "push:apps": "curl -X POST -F file=@dist.zip http://apps.specteam.pl/upload-web-app/%npm_package_name%",
+    "push:self": "curl -X POST -F file=@dist.zip https://tutorial.specteam.pl/deploy",
+    "deploy:apps": "npm run deploy:prepare && npm run build && npm run zip && npm run push:apps && npm run deploy:clean",
+    "deploy:self": "npm run deploy:prepare && npm run build && npm run zip && npm run push:self && npm run deploy:clean",
+    "deploy": "npm run deploy:self",
+    "update": "npm i @tblabs/truffle"
+  },
+  "author": "tB",
+  "license": "ISC",
+  "dependencies": {
+    "@tblabs/truffle": "^1.17.1",
+    "inversify": "^6.0.1",
+    "moment": "^2.29.4",
+    "reflect-metadata": "^0.1.13",
+    "showdown": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.0",
+    "buffer": "^5.7.1",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10",
+    "typescript": "^4.9.5"
+  }
+}
