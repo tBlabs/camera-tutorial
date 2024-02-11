@@ -221,14 +221,11 @@ root.Append(
     new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
         .AddContent("slide/:id", ({ id }) =>
         {
-            console.log('slide', id)
             const slide = slides.find(x => x.Id == id)
-            console.log(slide)
-            slide
+            return slide
                 ? _sf.Create(slide)
                 : "Slide not found"
         })
-        // .AddDefaultContent(() => _router.GoToStart())
-        .AddDefaultContent(() => "hi")
+        .AddDefaultContent(() => _router.GoToStart())
 )
 

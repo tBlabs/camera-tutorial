@@ -6,7 +6,7 @@
   "scripts": {
     "copy-backend-stuff": "cp ./src/.htaccess ./dist || true",
     "copy-assets": "cp -r ./assets/* ./dist || true",
-    "serve": "npm run clean && mkdir dist && npm run copy-assets &&  parcel ./src/index.html --dist-dir dist --port 4190",
+    "serve": "npm run clean && mkdir dist && npm run copy-assets && parcel ./src/index.html --dist-dir dist --port 4190",
     "prebuild": "if not exist dist mkdir dist && npm run copy-assets",
     "build": "npm run copy-assets && parcel build ./src/index.html --public-url .",
     "clean": "rm ./.cache -rf && rm ./.parcel-cache -rf && rm ./dist -rf",
