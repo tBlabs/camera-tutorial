@@ -1,5 +1,5 @@
 import { Div, Link } from "@tblabs/truffle";
-import { Router } from "../Router";
+import { Router } from "../Services/Router";
 
 
 export class Page extends Div

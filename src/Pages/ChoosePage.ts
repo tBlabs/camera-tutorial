@@ -1,7 +1,7 @@
 import { Button, Link } from "@tblabs/truffle";
 import { Page } from './Page';
 import { Markdown } from '../Components/Markdown';
-import { Router } from '../Router';
+import { Router } from '../Services/Router';
 import { ChooseOption } from '../Components/ChooseOption';
 import { IChoose } from '../Core/IChoose';
 import { Center } from "../Components/Center";

@@ -1,10 +1,10 @@
-import { Page } from './Pages/Page';
+import { Page } from '../Pages/Page';
 import { Router } from './Router';
-import { ChoosePage } from './Pages/ChoosePage';
-import { IChoose } from './Core/IChoose';
-import { ISlide } from './Core/ISlide';
-import { ISlideBase } from './Core/ISlideBase';
-import { SlidePage } from './Pages/SlidePage';
+import { ChoosePage } from '../Pages/ChoosePage';
+import { IChoose } from '../Core/IChoose';
+import { ISlide } from '../Core/ISlide';
+import { ISlideBase } from '../Core/ISlideBase';
+import { SlidePage } from '../Pages/SlidePage';
 
 
 export class SlideFactory

@@ -1,7 +1,7 @@
 import { Button, Div, Image, Link } from "@tblabs/truffle";
 import { Page } from './Page';
 import { Markdown } from '../Components/Markdown';
-import { Router } from '../Router';
+import { Router } from '../Services/Router';
 import { ISlide } from '../Core/ISlide';
 
 

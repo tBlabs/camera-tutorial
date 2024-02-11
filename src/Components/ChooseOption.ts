@@ -1,5 +1,5 @@
 import { Div, Image, Span } from "@tblabs/truffle";
-import { Router } from '../Router';
+import { Router } from '../Services/Router';
 import { IChooseOption } from '../Core/IChooseOption';
 
 
