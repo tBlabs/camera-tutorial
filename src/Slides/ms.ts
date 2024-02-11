@@ -49,7 +49,7 @@ Jaką pętle posiadasz?`,
         Content: `Aby sparować te pętle z telefonem należy przytrzymać przycisk (ten podłużny odstający element) przez 5 sekund do momentu w którym dioda znajdująca się w przycisku zacznie świecić *światłem ciągłym* (nie będzie migać).  
         
 W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Jabra\` lub podobne na liście nowo odnalezionych urządzeń.`,
-        ImageUrl: "ms/talk5.PNG",
+        ImageUrl: "ms/talk5.png",
         NextId: "jabra-onlist"
     },
     {
@@ -58,21 +58,21 @@ W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Jabra\` 
         Content: `Aby sparować te pętle z telefonem należy przesunąć suwak z boku obudowy a następnie przytrzymać okrągły przycisk na przednim panelu przez 5 sekund do momentu w którym dioda znajdująca się obok włącznika zacznie *migać na dwa kolory*.
         
 W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Samsung\` lub podobne na liście nowo odnalezionych urządzeń.`,
-        ImageUrl: "ms/sams.PNG",
+        ImageUrl: "ms/sams.png",
         NextId: "samsung-onlist"
     },
     {
         Id: "jabra-onlist",
         Type: "page",
         Content: `Po sparowaniu urządzenie powinno pokazać się na liście`,
-        ImageUrl: "ms/talk5onlist.PNG",
+        ImageUrl: "ms/talk5onlist.png",
         NextId: "call"
     },
     {
         Id: "samsung-onlist",
         Type: "page",
         Content: `Po sparowaniu urządzenie powinno pokazać się na liście`,
-        ImageUrl: "ms/samsonlist.PNG",
+        ImageUrl: "ms/samsonlist.png",
         NextId: "call"
     },
     {

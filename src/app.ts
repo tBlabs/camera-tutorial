@@ -24,7 +24,7 @@ const slides = [
 Co chcesz uruchomić?`,
         Options: [
             { Label: "Mikrokamere", ImageUrl: "tx.jpg", GoTo: "choose-phone" },
-            { Label: "Mikrosłuchawke", ImageUrl: "ms.jpg", GoTo: "ms-start" },
+            { Label: "Mikrosłuchawke", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
         ]
     },
     {
