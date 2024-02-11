@@ -6,6 +6,8 @@ import { SlideFactory } from './SlideFactory';
 import { ISlide } from './ISlide';
 import { iPhoneSlides } from './Slides/iPhone';
 import { ms } from './Slides/ms';
+import { IChooseOption } from './IChooseOption';
+import { ISlidePage } from './ISlidePage';
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -17,7 +19,7 @@ MultilineInput.DefaultCssClasses = "uk-textarea";
 
 const root = new Root().Class("root")
 
-const slides: (ISlide)[] = [
+const slides = [
     ...iPhoneSlides,
     ...ms,
     {
@@ -37,8 +39,34 @@ Co chcesz uruchomić?`,
         Title: "Jaki masz telefon?",
         Options: [
             { Label: "iPhone", ImageUrl: "iphone/iphone.jpg", GoTo: "iPhone-settings" },
-            { Label: "Android", ImageUrl: "android/android.jpg", GoTo: "Android" },
+            { Label: "Android", ImageUrl: "android/android.jpg", GoTo: "android" },
         ]
+    },
+    {
+        Id: "android",
+        Type: "page",
+        Content: `### Android
+        
+*⚠️ Ustawienie hotspota w systemie Android może wyglądać inaczej w zależności od jego wersji i producenta telefonu. Kolejne kroki mają charakter jedynie poglądowy*
+
+Rozwiń menu górne i znajdź coś co przypomina hotspot lub router osobisty (może nazywać się \`Hotspot\` lub \`Router\` lub jakoś inaczej).  
+Przytrzymaj te opcje i wejdź do ustawień.
+`,
+        ImageUrl: "android/android-1.jpg",
+        NextId: "android-hotspot"
+    },
+    {
+        Id: "android-hotspot",
+        Type: "page",
+        Content: `W polu \`Nazwa hotspota\`, \`SSID\` lub podobnym wpisz *hotspot1*. Wielkość znaków ma znaczenie! Nie pomyl się!  
+
+W polu \`Hasło\` wpisz *hotspot1password*. Wielkość znaków ma znaczenie!
+
+Pozostałe opcje raczej nie mają znaczenia, ale jeśli gdzieś w menu zauważysz opcje *wstecznej kompatybilności* lub podone - włącz je.  
+Szyfrowanie należy ustawić na *WPA2 PSK*. Warto też wyłączyć takie opcje jak *automatyczny hotstpot* czy *automatyczne wyłączanie*.
+`,
+        ImageUrl: "android/android-2.jpg",
+        NextId: "led"
     },
     {
         Id: "camera-start",
@@ -107,15 +135,16 @@ Jeśli to żadna z powyższych przyczyn - skontaktuj się z naszą infolinią.`,
         Type: "choose",
         Title: `🟢 Zielona migająca dioda oznacza, że kamera poprawnie nawiązała połączenie z serwerem.
         
-Wejdź na stronę odbiornika, której adres znajdziesz w *SMS od nas* lub na *karcie dołączonej do zestawu*.
+Wejdź na stronę odbiornika, której adres znajdziesz w *SMS od nas* lub na *karcie dołączonej do zestawu*.  
+    
+☎️ *Jeśli nie otrzymałeś haseł - zadzwoń i poproś o ich wygenerowanie!*
 
 Zaloguj się i sprawdź czy wszystko jest w porządku. Jeśli nie - wybierz którąś z poniższych opcji:`,
         Options: [
-            // { Label: "🙂 Wszystko ok!", ImageUrl: "", GoTo: "led-green" },
-            { Label: "Brak obrazu", ImageUrl: "", GoTo: "kamera:brak-obrazu" },
-            { Label: "Niewyraźny obraz", ImageUrl: "", GoTo: "kamera:niewyrazny-obraz" },
-            { Label: "Powolna transmisja", ImageUrl: "", GoTo: "led-red" },
-            { Label: "Za mała rozdzielczość", ImageUrl: "", GoTo: "led-red" },
+            { Label: "Brak obrazu", ImageUrl: "🚫", GoTo: "kamera:brak-obrazu" },
+            { Label: "Niewyraźny obraz", ImageUrl: "👓", GoTo: "kamera:niewyrazny-obraz" },
+            { Label: "Powolna transmisja", ImageUrl: "🐢", GoTo: "kamera:powolna-transmisja" },
+            { Label: "Za mała rozdzielczość", ImageUrl: "📺", GoTo: "kamera:mala-rozdzielczosc" },
         ]
     },
     {
@@ -129,7 +158,7 @@ Jeżeli po zalogowaniu się na stronie nie widzisz podglądu z kamery sprawdź:
 
 Obserwuj diodę na kamerze. Jeśli zaczęła migać na czerwono oznacza to problem z hotspotem. Sprawdź czy ten na pewno działa.
 `,
-         NextId: "contact"
+        NextId: "contact"
     },
     {
         Id: "kamera:niewyrazny-obraz",
@@ -140,7 +169,41 @@ Rozmazany obraz może oznaczać tylko jedno: obiektyw kamery został przestawion
 
 Zwróć również uwagę na to by podczas montażu w odzieży guzik nie obrócił się samoistnie.
 `,
-         NextId: "contact"
+        NextId: "contact"
+    },
+    {
+        Id: "kamera:powolna-transmisja",
+        Type: "page",
+        Content: `### Powolna transmisja
+        
+Kamera wysyła zdjęcia co maksymalnie 2-3 sekundy. Nie da się szybciej. Taka forma transmisji gwarantuje te samą jakość zdjęć za każdym razem niezależnie od jakości połączenia z internetem.  
+Jeśli natomiast czas przesłania zdjęcia przekracza 5 sekund może to oznaczać, że:
+- *Hotspot jeszcze się rozgrzewa* - dotyczy to głównie iPhone'ów które często na początu działają wolniej,
+- *Internet działa zbyt wolno* - i może to zależeć od miejsca, w którym jesteś, 
+- *Internet kończy się* - sprawdź czy masz wystarczającą ilość pakietów danych,
+- *Kiepski zasięg danego operatora* - być może inny operator będzie miał lepszy zasięg w tym miejscu,
+- *Operator ogranicza internet na czas rozmowy* - niektórzy operatorzy ograniczają transmisje danych podczas rozmowy telefonicznej. Rozłącz sie i sprawdź jak zareaguje kamera,
+- *Ustawiona jest zbyt duża rozdzielczość* - i ważące dużo zdjęcia potrzebują więcej czasu na przesłanie, ich rozdzielczość można zmienić wybierakiem w prawym górnym rogu aplikacji do podglądu,
+`,
+        NextId: "contact"
+    },
+    {
+        Id: "kamera:mala-rozdzielczosc",
+        Type: "page",
+        Content: `### Za mała rozdzielczość
+        
+Rozdzielczość zdjęć można ustawić wybierakiem w prawym górnym rogu aplikacji:
+- \`Niska jakość\` - 400x300px, szybka transmisja w małej rozdzielczości,
+- \`Jakość optymalna\` - 1200x900px, idealna pod kartke papieru,
+- \`Wysoka jakość\` - 1600x1200px, dobra pod ekran komputera,
+- itd  
+
+Im większe jest zdjęcie - tym dłużej będzie przesyłane.  
+
+Jeśli mimo zwiększenia rozdzielczości obraz nadal jest niewyraźny oznacza to problem z ostrością kamery (opisany w rozdziale "Niewyraźny obraz" w menu wyżej).
+
+`,
+        NextId: "contact"
     },
     {
         Id: "contact",
@@ -159,13 +222,15 @@ const _router = new Router();
 const _sf = new SlideFactory(_router);
 
 root.Append(
-    // new SlideEngine(sf, slides)
     new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
         .AddContent("slide/:id", ({ id }) =>
         {
             const slide = slides.find(x => x.Id == id)
-            if (slide)
-                return _sf.Create(slide)
+
+            slide
+                ? _sf.Create(slide)
+                : "Slide not found"
         })
+        .AddDefaultContent(() => _router.GoToStart())
 )
 

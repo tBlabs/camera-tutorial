@@ -1,4 +1,4 @@
-import { Button, Div, Image } from "@tblabs/truffle";
+import { Button, Div, Image, Link } from "@tblabs/truffle";
 import { SlidePage } from './Page';
 import { Markdown } from './Components/Markdown';
 import { Router } from './Router';
@@ -9,7 +9,7 @@ export class Slide extends SlidePage
 {
     constructor(_router: Router, slide: ISlidePage)
     {
-        super();
+        super(_router);
 
         this.middle.Append(
             new Markdown(slide.Content),
@@ -20,7 +20,7 @@ export class Slide extends SlidePage
 
         this.bottom.Append(
             new Button("Cofnij", () => _router.GoBack()).Color("#fff"),
-            slide.NextId && new Button("Dalej", () => _router.GoToSlide(slide.NextId)).Background("#ff7b0d").Color("#111").MarginLeft(8)
+            slide.NextId && new Button("Dalej", () => _router.GoToSlide(slide.NextId)).Background("#ff7b0d").Color("#111").MarginLeft(8),
         )
     }
 }

@@ -1,0 +1,9 @@
+RewriteEngine on
+Options +FollowSymlinks
+AddType application/octet-stream .zip
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+
+
+RewriteRule ^deploy$ deploy.php

@@ -1,4 +1,4 @@
-import { Div, Image } from "@tblabs/truffle";
+import { Div, Image, Span } from "@tblabs/truffle";
 import { Router } from './Router';
 import { IChooseOption } from './IChooseOption';
 
@@ -17,7 +17,8 @@ export class ChooseOption extends Div
             .CursorPointer()
             
         this.Append(
-            new Image(option.ImageUrl).Padding(0).WidthPercent(100),
+            option.ImageUrl.length < 4 && new Span(option.ImageUrl).FontSize(48).WidthPercent(100),
+            option.ImageUrl.length > 5 && new Image(option.ImageUrl).Padding(0).WidthPercent(100),
             new Div().Text(option.Label).TextAlignCenter().Padding(8).Background("#fff")
         );
 

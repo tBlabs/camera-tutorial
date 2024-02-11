@@ -1,4 +1,4 @@
-import { Button } from "@tblabs/truffle";
+import { Button, Link } from "@tblabs/truffle";
 import { SlidePage } from './Page';
 import { Markdown } from './Components/Markdown';
 import { Router } from './Router';
@@ -11,18 +11,17 @@ export class Choose extends SlidePage
 {
     constructor(_router: Router, slide: IChoosePage)
     {
-        super();
+        super(_router);
         this.middle.Append(
             new Markdown(slide.Title),
-            // "\n",
             new Center(
                 ...slide.Options
                     .map(x => new ChooseOption(_router, x))
             )
         );
 
-        this.bottom.Append(
-            new Button("Wróć", () => _router.GoBack()).Color("#fff")
+        this.bottom.Append(   
+            new Button("Wróć", () => _router.GoBack()).Color("#fff"),
         );
     }
 }
