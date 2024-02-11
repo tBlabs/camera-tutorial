@@ -1,13 +1,13 @@
 import { Button, Div, Image, Link } from "@tblabs/truffle";
-import { SlidePage } from './Page';
-import { Markdown } from './Components/Markdown';
-import { Router } from './Router';
-import { ISlidePage } from './ISlidePage';
+import { Page } from './Page';
+import { Markdown } from '../Components/Markdown';
+import { Router } from '../Router';
+import { ISlide } from '../Core/ISlide';
 
 
-export class Slide extends SlidePage
+export class SlidePage extends Page
 {
-    constructor(_router: Router, slide: ISlidePage)
+    constructor(_router: Router, slide: ISlide)
     {
         super(_router);
 

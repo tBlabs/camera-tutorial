@@ -1,13 +1,8 @@
-import 'reflect-metadata';
-import { NumberInput, TextInput, Button, Select, ModalWindow, Root, MultilineInput, Span, DestroyingContentSwitcher, DestroyingPatternContentSwitcher } from "@tblabs/truffle";
-import "moment/locale/pl";
+import { NumberInput, TextInput, Button, Select, ModalWindow, Root, MultilineInput, DestroyingPatternContentSwitcher } from "@tblabs/truffle";
 import { Router } from './Router';
 import { SlideFactory } from './SlideFactory';
-import { ISlide } from './ISlide';
 import { iPhoneSlides } from './Slides/iPhone';
-import { ms } from './Slides/ms';
-import { IChooseOption } from './IChooseOption';
-import { ISlidePage } from './ISlidePage';
+import { msSlides } from './Slides/ms';
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -17,11 +12,10 @@ ModalWindow.DefaultCssClasses = "tf-modal-window";
 ModalWindow.Hook = Root.Hook;
 MultilineInput.DefaultCssClasses = "uk-textarea";
 
-const root = new Root().Class("root")
 
 const slides = [
     ...iPhoneSlides,
-    ...ms,
+    ...msSlides,
     {
         Id: "start",
         Type: "choose",
@@ -218,6 +212,8 @@ Jeśli nie udało Ci się samodzielnie poradzić sobie z problemem skorzystaj z 
     },
 ]
 
+const root = new Root().Class("root")
+
 const _router = new Router();
 const _sf = new SlideFactory(_router);
 
@@ -225,12 +221,14 @@ root.Append(
     new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
         .AddContent("slide/:id", ({ id }) =>
         {
+            console.log('slide', id)
             const slide = slides.find(x => x.Id == id)
-
+            console.log(slide)
             slide
                 ? _sf.Create(slide)
                 : "Slide not found"
         })
-        .AddDefaultContent(() => _router.GoToStart())
+        // .AddDefaultContent(() => _router.GoToStart())
+        .AddDefaultContent(() => "hi")
 )
 

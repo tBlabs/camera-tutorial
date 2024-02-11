@@ -1,8 +1,8 @@
-import { ISlide } from './ISlide';
+import { ISlideBase } from './ISlideBase';
 import { IChooseOption } from './IChooseOption';
 
 
-export interface IChoosePage extends ISlide
+export interface IChoose extends ISlideBase
 {
     Title: string;
     Options: IChooseOption[];

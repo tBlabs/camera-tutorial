@@ -1,6 +1,6 @@
 import { Div, Image, Span } from "@tblabs/truffle";
-import { Router } from './Router';
-import { IChooseOption } from './IChooseOption';
+import { Router } from '../Router';
+import { IChooseOption } from '../Core/IChooseOption';
 
 
 export class ChooseOption extends Div
