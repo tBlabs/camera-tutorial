@@ -9,6 +9,7 @@
     "serve": "npm run clean && mkdir dist && npm run copy-assets && parcel ./src/index.html --dist-dir dist --port 4190",
     "prebuild": "if not exist dist mkdir dist && npm run copy-assets",
     "build": "npm run copy-assets && parcel build ./src/index.html --public-url .",
+    "build:prod": "npm run copy-assets && parcel build ./src/index.html --public-url . --no-source-maps",
     "clean": "rm ./.cache -rf && rm ./.parcel-cache -rf && rm ./dist -rf",
     "deploy:clean": "rm dist.zip -f && rm ./dist -rf",
     "deploy:prepare": "npm run deploy:clean && if not exist dist mkdir dist",
@@ -16,7 +17,7 @@
     "push:apps": "curl -X POST -F file=@dist.zip http://apps.specteam.pl/upload-web-app/%npm_package_name%",
     "push:self": "curl -X POST -F file=@dist.zip https://tutorial.specteam.pl/deploy",
     "deploy:apps": "npm run deploy:prepare && npm run build && npm run zip && npm run push:apps && npm run deploy:clean",
-    "deploy:self": "npm run deploy:prepare && npm run build && npm run zip && npm run push:self && npm run deploy:clean",
+    "deploy:self": "npm run deploy:prepare && npm run build:prod && npm run zip && npm run push:self && npm run deploy:clean",
     "deploy": "npm run deploy:self",
     "update": "npm i @tblabs/truffle"
   },

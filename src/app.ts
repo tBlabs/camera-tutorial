@@ -1,4 +1,4 @@
-import { NumberInput, TextInput, Button, Select, ModalWindow, Root, MultilineInput, DestroyingPatternContentSwitcher } from "@tblabs/truffle";
+import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Span, Link } from "@tblabs/truffle";
 import { Router } from './Services/Router';
 import { SlideFactory } from './Services/SlideFactory';
 import { iPhoneSlides } from './Slides/iPhone';
@@ -13,7 +13,6 @@ Button.DefaultCssClasses = "uk-button uk-button-default";
 Select.DefaultCssClasses = "uk-select";
 ModalWindow.DefaultCssClasses = "tf-modal-window";
 ModalWindow.Hook = Root.Hook;
-MultilineInput.DefaultCssClasses = "uk-textarea";
 
 
 const slides = [
@@ -22,13 +21,13 @@ const slides = [
         Type: "choose",
         Title: `### Samouczek
 
-Niniejszy samouczek ma za zadanie jedynie pomóc w uruchomieniu sprzętu.  
-Pełna instrukcja obsługi znajduje się pod adresem [watcher.specteam.pl](https://watcher.specteam.pl/#help)
+Niniejszy poradnik ma za zadanie pomóc w samodzielnym uruchomieniu sprzętu.  
+Pełna instrukcja obsługi znajduje się pod adresem [watcher.specteam.pl#help](https://watcher.specteam.pl/#help) i należy się z nią bezwzględnie zapoznać!
 
 *Co chcesz uruchomić?*`,
         Options: [
-            { Label: "Mikrokamere", ImageUrl: "tx.jpg", GoTo: "choose-phone" },
-            { Label: "Mikrosłuchawke", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
+            { Label: "Mikrokamerę", ImageUrl: "tx.jpg", GoTo: "choose-phone" },
+            { Label: "Mikrosłuchawkę", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
         ]
     },
     ...msSlides,
@@ -79,8 +78,12 @@ root.Append(
             const slide = slides.find(x => x.Id == id)
             return slide
                 ? _sf.Create(slide)
-                : "Slide not found"
+                : new Span("Slide not found")
         })
-        .AddDefaultContent(() => _router.GoToStart())
+        .AddDefaultContent(() =>
+        {
+            _router.GoToStart()
+            return new Link("Go to start").OnClick(() => _router.GoToStart())
+        })
 )
 

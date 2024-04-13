@@ -4,7 +4,8 @@ export const msSlides = [
         Type: "page",
         Content: `### Uruchomienie mikrosłuchawki
         
-⚠️ Przed przystąpieniem do uruchomienia mikrosłuchawki wyczyść porządnie ucho. Pamiętaj by czyścić je przed każdym włożeniem słuchawki!
+⚠️ Przed przystąpieniem do uruchomienia mikrosłuchawki wyczyść porządnie ucho. Pamiętaj by czyścić je przed każdym włożeniem słuchawki!  
+Zapchanej słuchawki nie da się samodzielnie wyczyścić, więc należy bezwzględnie dbać o higienę!
 
 `,
         ImageUrl: "ms/ms.jpeg",
@@ -23,7 +24,7 @@ export const msSlides = [
         Type: "page",
         Content: `Włóż baterie. Płaską częścią do góry. Kółeczkiem w strone sprężynki.  
 
-Zakręć i włóż słuchawke do *czystego ucha*. Powinien być słyszalny szum.
+Zakręć i włóż słuchawkę do *czystego ucha*. Powinien być słyszalny szum. Póki co nie dociskaj słuchawki. Postaraj się znaleźć punkt w którym szum jest najgłośniejszy poprzez obracanie słuchawki i dopiero wtedy dociśnij ją w głąb kanału.
 `,
         ImageUrl: "ms/bat.jpeg",
         NextId: "ms-loop"
@@ -33,11 +34,11 @@ Zakręć i włóż słuchawke do *czystego ucha*. Powinien być słyszalny szum.
         Type: "choose",
         Title: `### Pętla indukcyjna 
         
-Pętla łączy telefon z mikrosłuchawką.   
-Należy ją umieścić na szyji.  
+Pętla łączy telefon z mikrosłuchawką za pomocą indukcji magnetycznej generowanej w cewce (to ten długi czarny element w oplocie przypominający sznurek - należy się z nim obchodzić delikatnie ponieważ jest zbudowany z cienkiego drutu, który może pęknąć).   
+Pętle należy umieścić na szyji zakładając ją przez głowę.  
 Przed przystąpieniem do użytkowania należy ją sparować z telefonem.
         
-Jaką pętle posiadasz?`,
+*Jaką pętle posiadasz?*`,
         Options: [
             { Label: "Samsung", ImageUrl: "ms/samsung.jpeg", GoTo: "samsung" },
             { Label: "Jabra", ImageUrl: "ms/jabra.jpeg", GoTo: "jabra" },
@@ -46,7 +47,7 @@ Jaką pętle posiadasz?`,
     {
         Id: "jabra",
         Type: "page",
-        Content: `Aby sparować te pętle z telefonem należy przytrzymać przycisk (ten podłużny odstający element) przez 5 sekund do momentu w którym dioda znajdująca się w przycisku zacznie świecić *światłem ciągłym* (nie będzie migać).  
+        Content: `Aby sparować Jabre z telefonem należy przytrzymać przycisk (ten podłużny odstający element) przez 5 sekund do momentu, w którym dioda znajdująca się w przycisku zacznie świecić *światłem ciągłym* (nie będzie migać) na niebiesko.  
         
 W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Jabra\` lub podobne na liście nowo odnalezionych urządzeń.`,
         ImageUrl: "ms/talk5.png",
@@ -55,7 +56,7 @@ W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Jabra\` 
     {
         Id: "samsung",
         Type: "page",
-        Content: `Aby sparować te pętle z telefonem należy przesunąć suwak z boku obudowy a następnie przytrzymać okrągły przycisk na przednim panelu przez 5 sekund do momentu w którym dioda znajdująca się obok włącznika zacznie *migać na dwa kolory*.
+        Content: `Aby sparować pętle Samsung z telefonem należy przesunąć suwak z boku obudowy a następnie przytrzymać okrągły przycisk na przednim panelu przez 5 sekund do momentu, w którym dioda znajdująca się obok włącznika zacznie *migać na dwa kolory*.
         
 W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Samsung\` lub podobne na liście nowo odnalezionych urządzeń.`,
         ImageUrl: "ms/sams.png",
@@ -88,7 +89,19 @@ Każda pętla ma kilka dodatkowych funkcji:
 - *dłuższe przytrzymanie* - rozłączenie rozmowy, 
 - *krótkie naciśnięcie* - odebranie połączenia
 
-🔋 Pamiętaj również by ładować pętle. Stan naładowania jest sygnalizowany przez diodę.`,
+Działanie powyższych funkcji należy sprawdzić eksperymentalnie, ponieważ każdy telefon może działać trochę inaczej.
+
+🔋 Pamiętaj by ładować pętle. Stan naładowania jest sygnalizowany przez diodę.  
+🪢 Nie nadwyrężaj pętli. Nie rozciągaj jej i nie skręcaj. Jest zbudowana z cienkiego drutu, którego przerwanie spowoduje awarie zestawu.  
+🦷 Pamiętaj by nie wychodzić poza zasięg pętli (maksymalnie kilka metrów). Miej telefon przy sobie.  
+
+---  
+
+*Co dalej?*
+
+Koniecznie zapoznaj się z pełną wersją instrukcji mikrosłuchawki: [watcher.specteam.pl](https://watcher.specteam.pl/#help/activation/ear)  
+Jest tam opisanych dużo detali, które mogą Ci uratować życie! 
+`,
         ImageUrl: "",
         NextId: ""
     },

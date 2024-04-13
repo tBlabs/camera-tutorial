@@ -17,12 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 	foreach($files as $file){ 
         if ($file == ".htaccess") continue;
         if ($file == "deploy.php") continue;
+        if ($file == "clean.php") continue;
 	  if(is_file($file)) {
 		 // echo "- ".$file."\n";
 		unlink($file); 
 	  }
 	}
-	
+
 	$pack = "dist.zip";
 	move_uploaded_file($_FILES['file']['tmp_name'], "./".$pack);
 	 
@@ -61,10 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 						
 						$dir = implode("/", $cats);
 						rename($file, $dir."/".$last);
-						
 					}
 					else echo "   nothing to explode"."\n";
-					
 				}
 			}
 					
