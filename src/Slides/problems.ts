@@ -19,6 +19,11 @@ Obserwuj diodę na kamerze. Jeśli zaczęła migać na czerwono oznacza to probl
         
 Rozmazany obraz może oznaczać tylko jedno: obiektyw kamery został przestawiony. Kamera ma stałą ogniskową i można ją zmieniać obracając guziczkiem. Trzymając kamerę 30-40cm od kartki, kręć powoli guzikiem tak by tekst stał się dobrze widoczny. Rób to ostrożnie ponieważ to delikatny element. Staraj się nie wykręcić guzika zupełnie jak i nie wkręcić go za mocno. Zalecamy ruchy po 2-3mm.
 
+### Obraz rozmazany częściowo
+
+Jeśli dobrze widoczna jest tylko część kartki a reszta jest rozmazana oznacza to, że guzik-soczewka nie jest ustawiony równolegle do matrycy kamery. To bardzo niebezpieczna sytuacja, która może oznaczać uszkodzenie gwintu, w którym jest osadzony obiektyw. Rozwiązaniem problemu jest wypoziomowanie guzika względem matrycy. Można spróbować wykręcić guzik zupełnie i wkręcić go na nowo dbając o zachowanie równoległości elementów.
+ 
+
 Zwróć również uwagę na to by podczas montażu w odzieży guzik nie obrócił się samoistnie.
 `,
         NextId: "contact"

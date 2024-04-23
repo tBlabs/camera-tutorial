@@ -9,7 +9,7 @@ export class ChooseOption extends Div
     {
         super();
         this.Border(1, "#888")
-            .Width(42, "%")
+            // .Width(42, "%")
             .DisplayInlineBlock()
             .MarginRight(8)
             .MarginTop(8)
@@ -18,7 +18,7 @@ export class ChooseOption extends Div
             
         this.Append(
             option.ImageUrl.length < 4 && new Span(option.ImageUrl).FontSize(48).WidthPercent(100),
-            option.ImageUrl.length > 5 && new Image(option.ImageUrl).Padding(0).WidthPercent(100),
+            option.ImageUrl.length > 5 && new Image(option.ImageUrl).Height(260).Padding(0).WidthPercent(100),
             new Div().Text(option.Label).TextAlignCenter().Padding(8).Background("#fff")
         );
 

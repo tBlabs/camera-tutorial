@@ -3,17 +3,17 @@ export const leds = [
         Id: "led",
         Type: "choose",
         Title: `### Uruchomienie kamery
-Podłącz kamere do powerabanka. Można użyć dowolnego kabla mini-USB.
+Podłącz kamere do powerabanka. Można użyć dowolnego kabla mini-USB jak i dowolnego powerbanka. Ten dostarczony przez nas powinien wystarczyć na co najmniej 4 godziny pracy.
 
-![Połączenie](conn.jpeg)
+![Połączenie](connection.jpeg)
 
-Odczekaj minute aż kamera się uruchomi.  
+Odczekaj około **50 sekund**, aż kamera się uruchomi.  
 
-Przy gniazdku zasilania kamery znajduje się dioda.\n\nNa jaki miga kolor?`,
+Przy gniazdku zasilania kamery znajduje się dioda.\n\n*Na jaki miga kolor?*`,
         Options: [
             { Label: "🟢 Zielony", ImageUrl: "green.jpeg", GoTo: "led-green" },
             { Label: "🔴 Czerwony", ImageUrl: "red.jpeg", GoTo: "red-led" },
-            { Label: "🟢🔴Światło ciągłe", ImageUrl: "red.jpeg", GoTo: "const-led" },
+            { Label: "🟢lub🔴 Światło ciągłe", ImageUrl: "red.jpeg", GoTo: "const-led" },
             { Label: "⚪ Nic nie miga", ImageUrl: "noled.jpeg", GoTo: "no-led" },
         ]
     },
