@@ -14,7 +14,7 @@ Przy gniazdku zasilania kamery znajduje się dioda.\n\n*Na jaki miga kolor?*`,
             { Label: "🟢 Zielony", ImageUrl: "green.jpeg", GoTo: "led-green" },
             { Label: "🔴 Czerwony", ImageUrl: "red.jpeg", GoTo: "red-led" },
             { Label: "🟢lub🔴 Światło ciągłe", ImageUrl: "red.jpeg", GoTo: "const-led" },
-            { Label: "⚪ Nic nie miga", ImageUrl: "noled.jpeg", GoTo: "no-led" },
+            { Label: "⚪ Nie miga", ImageUrl: "noled.jpeg", GoTo: "no-led" },
         ]
     },
     {
@@ -62,6 +62,7 @@ Zaloguj się i sprawdź czy wszystko jest w porządku. Jeśli nie - wybierz któ
             { Label: "Niewyraźny obraz", ImageUrl: "👓", GoTo: "kamera:niewyrazny-obraz" },
             { Label: "Powolna transmisja", ImageUrl: "🐢", GoTo: "kamera:powolna-transmisja" },
             { Label: "Za mała rozdzielczość", ImageUrl: "📺", GoTo: "kamera:mala-rozdzielczosc" },
+            { Label: "Brak obrazu podczas rozmowy", ImageUrl: "☎️", GoTo: "kamera:podczas-rozmowy" },
         ]
     },
 ]

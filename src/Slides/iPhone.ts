@@ -53,6 +53,13 @@ export const iPhoneSlides = [
         Type: "page",
         Content: "Wyłącz i włącz hotspota (Guzik `Dopuszczaj innych`).\n\n⚠️ *Pamiętaj by pozostawić telefon na tym ekranie na czas uruchamiania kamery! Bez tego urządzenie się nie podłączy.*",
         ImageUrl: "iphone/hot.png",
+        NextId: "iPhonw:wifi-warning"
+    },
+    {
+        Id: "iPhonw:wifi-warning",
+        Type: "page",
+        Content: "⚠️ *Od tej pory nie dotykaj opcji związanych z Wifi!*\n\nPamiętaj, że moduł wifi, który zwyczajowo służy do odbierania danych teraz jest w stanie nadawania. Klikając ikone wifi uruchomisz odbieranie a tym samym wyłączysz router. Telefon tego nie komunikuje (choć czasem tak) a kamera przestaje po prostu działać.\n\nCo ciekawe dezaktywacja routera poprzez włączenie wifi nie jest widoczna w menu telefonu. Opcja \"Dopuszczaj innych\" nadal świeci się na zielono co może bardzo wprowadzać w błąd.",
+        ImageUrl: "iphone/router-disable.jpg",
         NextId: "camera-start"
     }
 ]

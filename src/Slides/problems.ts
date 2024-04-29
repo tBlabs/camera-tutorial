@@ -62,4 +62,19 @@ Jeśli mimo zwiększenia rozdzielczości obraz nadal jest niewyraźny oznacza to
 `,
         NextId: "contact"
     },
+    {
+        Id: "kamera:podczas-rozmowy",
+        Type: "page",
+        Content: `### Kamera nie nadaje podczas rozmowy telefonicznej
+        
+Ten problem jest związany z operatorem Twojej sieci, który nie udostępnia łącza internetowego podczas rozmowy telefonicznej (tak jaby zakładali, że skoro człowiek rozmawia to nie korzysta z internetu...).  
+W tej sytuacji jedyne co można zrobić to:
+- \`Udać się do swojego operatora i poprosić o włączenie internetu na czas rozmów\` - Czasem się to udaje, ale procedura trwa,
+- \`Kupić starter innego operatora\` - Nowy starter kosztuje kilka złotych i zwykle ma włącznone wszystkie dostępne opcje,
+- \`Użyć drugiego telefonu do połączeń\` - Cały zestaw można skonfigurować tak by działał z dwoma telefonami: jeden do internetu dla kamery, drugi do połączeń głosowych,
+- \`Użyć aplikacji do połączeń głosowych zamiast połączenia GSM\` - Rozmowę można prowadzić przez Messengera lub inny komunikator, który wykorzystuje do połączeń internet a nie sieć GSM.
+
+`,
+        NextId: "contact"
+    },
 ]
