@@ -1,3 +1,86 @@
+export const msProblems = [
+    {
+        Id: "ms:problems",
+        Type: "choose",
+        Title: `### Gotowe!
+
+Masz już przygotowanie teoretyczne i praktyczne. Sprawdź wszystko dwa razy i przyzwyczaj ucho do słuchawki.  
+*Pamiętaj by je czyścić przed każdym włożeniem słuchawki!*
+
+Poniżej znajduje się lista potencjalnych problemów, które nie powinny wystąpić przy normalnym użytkowaniu. Jeśli jednak coś jest nie tak zacznij od tej listy:`,
+        Options: [
+            { Label: "Nic nie słychać", ImageUrl: "🔇", GoTo: "ms:brak-dzwieku" },
+            { Label: "Słabo słychać", ImageUrl: "🔈", GoTo: "ms:niska-glosnosc" },
+            { Label: "Za głośno słychać", ImageUrl: "📢", GoTo: "ms:za-glosno" },
+            { Label: "Występują zakłócenia", ImageUrl: "📡", GoTo: "ms:zaklocenia" },
+            { Label: "Brak połączenia", ImageUrl: "🔗", GoTo: "ms:brak-polaczenia" },
+        ]
+    },
+    {
+        Id: "ms:brak-dzwieku",
+        Type: "page",
+        Content: `### Brak dźwięku
+        
+Powodów braku dźwięku w słuchawce może być kilka. Szukając usterki upewnij się, że:
+- *Słychać szum w słuchawce* - Słuchawka powinna delikatnie szumieć po włożeniu baterii. Jeśli tego nie robi to najprawdopodobniej bateria nie została włożona lub wyczerpała się
+- *Słuchawka nie jest zapchana* - Zanieczyszczenie słuchawki woskowiną spowoduje znaczne obniżenie głośności. Słuchawki nie da się samodzielnie wyczyścić, dlatego tak ważne jest dbanie o czystość ucha
+- *Pętla indukcyjna jest na szyji* - Jej skuteczny zasięg pracy wynosi max 50cm
+- *Pętla jest naładowana i włączona* - Jeśli nie miga żadna dioda oznacza to brak prądu
+- *Pętla jest sparowana z telefonem* - Musisz mieć pewność, że pętla jest połączona za pomocą Bluetooth z Twoim telefonem
+- *Trwa połączenie głosowe* - Upewnij się, że "ktoś jest na linii" i nie mówi szeptem
+- *Głośność jest ustawiona na maksymalną* - Podczas prób warto zacząć od maksymalnej głośności, którą ustawia się w telefonie a czasem na pętli
+
+Jeśli powyższe sprawdzenia nie przyniosły efektu:
+- Przyłóż pętle bliżej ucha i włącz ją - powinien być słyszalny pisk. Jeśli go nie ma to najprawdopodobniej cewka pętli została uszkodzona i należy ją wymienić,
+`,
+        NextId: "contact"
+    },
+    {
+        Id: "ms:niska-glosnosc",
+        Type: "page",
+        Content: `### Za cicho
+        
+Zbyt niska głośność może być oznaką:
+- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być najdalej na szyji
+- *Słaba bateria w słuchawce* - Spróbuj włożyć nową
+- *Zapchana słuchawka* - Woskowina mogła zablokować wylot dźwięku
+- *Ustawiona zbyt niska głośność* - Ustaw w telefonie maksymalną głośność rozmowy
+`,
+        NextId: "contact"
+    },
+    {
+        Id: "ms:za-glosno",
+        Type: "page",
+        Content: `### Zbyt głośno
+        
+Wysoka głośność może być oznaką:
+- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być na szyji
+- *Ustawiona jest zbyt wysoka głośność* - Ustaw w telefonie mniejszą głośność rozmowy
+`,
+        NextId: "contact"
+    },
+    {
+        Id: "ms:zaklocenia",
+        Type: "page",
+        Content: `### Zakłócenia
+        
+Zakłócenia w słuchawce w postaci buczenia bądź pisku mogą być oznaką przebywania w otoczeniu czegoś co te zakłócenia emituje (świetlówka, silnik elektryczny, silnik samochodu, silne pole magnetyczne itp). W takim wypadku warto zmienić otoczenie. Jeśli mimo to problemy nadal występują należy upewnić się, że:
+- *Klapka baterii jest dobrze dokręcona* - Słabe dociśnięcie baterii może powodować trzaski
+- *Bateria w słuchawce nie jest stara* - Słaba bateria może czasem objawiać się delikatnym piskiem`,
+        NextId: "contact"
+    },
+    {
+        Id: "ms:brak-polaczenia",
+        Type: "page",
+        Content: `### Brak połączenia
+        
+Może być spowodowany:
+- *Nieudanym parowaniem pętli z telefonem* - Wykonaj procedure ponownie i upewnij się, że telefon "widzi" pętle
+- *Nie wybraniem bluetooth na czas rozmowy* - Dzwoniąc upewnij się, że rozmowa jest przekierowana na bluetooth
+- *Bycie poza zasięgiem bluetooth* - Efektywny zasięg bluetooth to kilka metrów. Nie odchodź za daleko od pętli`,
+        NextId: "contact"
+    },
+]
 export const msSlides = [
     {
         Id: "ms-start",
@@ -14,8 +97,7 @@ Zapchanej słuchawki nie da się samodzielnie wyczyścić, więc należy bezwzgl
     {
         Id: "ms-open",
         Type: "page",
-        Content: `Odkręć wieczko tak jak odkręca się butelkę.
-`,
+        Content: `Odkręć wieczko tak jak odkręca się butelkę.`,
         ImageUrl: "ms/open.jpeg",
         NextId: "ms-bat"
     },
@@ -82,6 +164,7 @@ W telefonie należy wejść w liste urządzeń bluetooth i odnaleźć \`Samsung\
         Content: `Gotowe!
         
 Od teraz możesz wykonywać połączenia z użyciem mikrosłuchawki.  
+Upewnij się, że ucho jest czyste.  
 Załóż pętle na szyje i wybierz do kogoś numer. Sprawdź czy wszystko działa.
 
 Każda pętla ma kilka dodatkowych funkcji:
@@ -90,19 +173,24 @@ Każda pętla ma kilka dodatkowych funkcji:
 - *krótkie naciśnięcie* - odebranie połączenia
 
 Działanie powyższych funkcji należy sprawdzić eksperymentalnie, ponieważ każdy telefon może działać trochę inaczej.
-
-🔋 Pamiętaj by ładować pętle. Stan naładowania jest sygnalizowany przez diodę.  
-🪢 Nie nadwyrężaj pętli. Nie rozciągaj jej i nie skręcaj. Jest zbudowana z cienkiego drutu, którego przerwanie spowoduje awarie zestawu.  
-🦷 Pamiętaj by nie wychodzić poza zasięg pętli (maksymalnie kilka metrów). Miej telefon przy sobie.  
-
----  
-
-*Co dalej?*
-
-Koniecznie zapoznaj się z pełną wersją instrukcji mikrosłuchawki: [watcher.specteam.pl](https://watcher.specteam.pl/#help/activation/ear)  
-Jest tam opisanych dużo detali, które mogą Ci uratować życie! 
+`,
+        NextId: "ms:important"
+    },
+    {
+        Id: "ms:important",
+        Type: "page",
+        Content: `- *Pamiętaj by ładować pętle* - Stan naładowania jest sygnalizowany przez diodę.  
+- *Nie nadwyrężaj pętli* - Nie rozciągaj jej i nie skręcaj. Jest zbudowana z cienkiego drutu, którego przerwanie spowoduje awarie zestawu.  
+- *Pamiętaj by nie wychodzić poza zasięg pętli* - Pętla działa maksymalnie kilka metrów od telefonu. Miej telefon przy sobie.  
 `,
         ImageUrl: "",
-        NextId: ""
+        NextId: "ms:problems"
     },
 ]
+
+
+
+// *Co dalej?*
+
+// Koniecznie zapoznaj się z pełną wersją instrukcji mikrosłuchawki: [watcher.specteam.pl](https://watcher.specteam.pl/#help/activation/ear)
+// Jest tam opisanych dużo detali, które mogą Ci uratować życie! 
