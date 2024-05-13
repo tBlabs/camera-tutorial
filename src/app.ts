@@ -21,15 +21,44 @@ const slides = [
         Type: "choose",
         Title: `### Samouczek
 
-Niniejszy poradnik ma za zadanie pomóc w samodzielnym uruchomieniu sprzętu.  
+Niniejszy poradnik ma za zadanie pomóc w rozwiązaniu ewentualnych problemów jak i w samodzielnym uruchomieniu sprzętu.  
 Pełna instrukcja obsługi znajduje się pod adresem [watcher.specteam.pl#help](https://watcher.specteam.pl/#help) i należy się z nią bezwzględnie zapoznać!
 
-*Co chcesz uruchomić?*`,
+*Jeśli masz problem:*  
+- [Pomoc dotycząca już sparowanej słuchawki](#slide/ms:problems) 🦻  
+- [Pomoc dotycząca już połączonej kamery](#slide/led) 🎥  
+
+*Jeśli chcesz coś uruchomić:*`,
         Options: [
-            { Label: "Mikrokamerę", ImageUrl: "tx.jpg", GoTo: "choose-phone" },
-            { Label: "Mikrosłuchawkę", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
-            { Label: "Mikrosłuchawkę Nano", ImageUrl: "mag1.jpg", GoTo: "magnetic" },
+            { Label: "Mikrokamera", ImageUrl: "tx.jpg", GoTo: "choose-phone" },
+            { Label: "Mikrosłuchawka", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
+            { Label: "Słuchawka Nano", ImageUrl: "mag1.jpg", GoTo: "magnetic" },
+            { Label: "Przygotowanie telefonu", ImageUrl: "phone.jpg", GoTo: "phone:prepare" },
         ]
+    },
+    {
+        Id: "phone:prepare",
+        Type: "page",
+        Content: `### Jak wyciszyć telefon
+        
+Jeśli obawiasz się, że Twój telefon zacznie wydawać jakieś dźwięki podczas "akcji" zadbaj o jego prawidłowe wyciszenie:
+- *Wyłącz dźwięki* - większość aparatów posiada funkcję dezaktywacji dźwięków
+- *Włącz tryb "nie przeszkadzać"* - w każdym telefonie może to się nazywać inaczej, przeczytaj instrukcje
+- *Podepnij słuchawki przewodowe* - w razie gdyby bluetooth się odłączyło telefon (w teorii) przekierować rozmowę na zwykłe słuchawki. Sprawdź czy Twój telefon się tak zachowa
+- *Wykonaj próbę* - sprawdzaj i testuj każdy możliwy scenariusz. Np. podczas rozmowy odsuń telefon na 20 metrów i sprawdź co się stanie kiedy telefon straci połączenie
+- *Zaklej głośniczki* - użyj grubej taśmy lub jakiegoś wyciszającego materiału i przyklej go do głośników
+- *Zdemontuj głośniki* - usuń z telefonu elementy emitujące dźwięki, jesli nie wiesz jak to zrboić - idź do serwisu
+
+### Spradź czas pracy
+
+Upewnij się, że Twój telefon "podoła" zadaniu i wytrzyma co najmniej tyle czasu ile potrzebujesz. W tym celu:
+- *Włącz hotspota i kamere*
+- *Otwórz stronę podglądu z kamery* - niech przesyła faktyczne zdjęcia tekstu
+- *Podłącz bluetooth*
+- *Wykonaj połączenie głosowe* - przekieruj rozmowe na bluetooth
+- *Używaj całego zestawu tak jak będziesz go używać podczas "akcji"* - dopiero taki test "powie" czy bateria w Twoim telefonie poradzi sobie z zadaniem
+
+Przy okazji w ten sposób wykonasz również próbę ogniw w zestawie. Zanim wejdziesz na salę musisz mieć pewność, że baterie (powerbank i pętla) są naładowane i wytrzymają tyle ile potrzebujesz.`,
     },
     ...msSlides,
     ...msProblems,

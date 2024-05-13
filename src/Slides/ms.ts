@@ -2,16 +2,12 @@ export const msProblems = [
     {
         Id: "ms:problems",
         Type: "choose",
-        Title: `### Gotowe!
-
-Masz już przygotowanie teoretyczne i praktyczne. Sprawdź wszystko dwa razy i przyzwyczaj ucho do słuchawki.  
-*Pamiętaj by je czyścić przed każdym włożeniem słuchawki!*
-
-Poniżej znajduje się lista potencjalnych problemów, które nie powinny wystąpić przy normalnym użytkowaniu. Jeśli jednak coś jest nie tak zacznij od tej listy:`,
+        Title: `Poniżej znajduje się lista potencjalnych problemów, które nie powinny wystąpić przy normalnym użytkowaniu. Jeśli jednak coś jest nie tak zacznij od tej listy:`,
         Options: [
             { Label: "Nic nie słychać", ImageUrl: "🔇", GoTo: "ms:brak-dzwieku" },
             { Label: "Słabo słychać", ImageUrl: "🔈", GoTo: "ms:niska-glosnosc" },
-            { Label: "Za głośno słychać", ImageUrl: "📢", GoTo: "ms:za-glosno" },
+            { Label: "Słychać za głośno", ImageUrl: "📢", GoTo: "ms:za-glosno" },
+            { Label: "Słychać na zewnątrz", ImageUrl: "🦻", GoTo: "ms:slychac" },
             { Label: "Występują zakłócenia", ImageUrl: "📡", GoTo: "ms:zaklocenia" },
             { Label: "Brak połączenia", ImageUrl: "🔗", GoTo: "ms:brak-polaczenia" },
         ]
@@ -78,6 +74,18 @@ Może być spowodowany:
 - *Nieudanym parowaniem pętli z telefonem* - Wykonaj procedure ponownie i upewnij się, że telefon "widzi" pętle
 - *Nie wybraniem bluetooth na czas rozmowy* - Dzwoniąc upewnij się, że rozmowa jest przekierowana na bluetooth
 - *Bycie poza zasięgiem bluetooth* - Efektywny zasięg bluetooth to kilka metrów. Nie odchodź za daleko od pętli`,
+        NextId: "contact"
+    },
+    {
+        Id: "ms:slychac",
+        Type: "page",
+        Content: `### Słuchawkę słychać na zewnątrz
+        
+Jeżeli Twojego rozmówcę słychać poza uchem, w którym jest słuchawka oznacza to, że:
+- *Słuchawka jest za słabo włożona* - dociśnij ją mocniej, ma uszczelnić ucho tak by żadne dźwięki nie "przelatywały" ani w jedną ani w drugą stronę
+- *Ścisz rozmowę* - użyj regulatora głośności w telefonie by obniżyć głośność. Jeśli ten nie działa - zmień telefon
+- *Odsuń pętle od słuchawki* - odległość pętli od słuchawki ma duży wpływ na głośność
+- *Poproś swojego rozmówcę by mówił ciszej* - siła głosu "po drugiej stronie" również ma znaczenie`,
         NextId: "contact"
     },
 ]
@@ -182,6 +190,20 @@ Działanie powyższych funkcji należy sprawdzić eksperymentalnie, ponieważ ka
         Content: `- *Pamiętaj by ładować pętle* - Stan naładowania jest sygnalizowany przez diodę.  
 - *Nie nadwyrężaj pętli* - Nie rozciągaj jej i nie skręcaj. Jest zbudowana z cienkiego drutu, którego przerwanie spowoduje awarie zestawu.  
 - *Pamiętaj by nie wychodzić poza zasięg pętli* - Pętla działa maksymalnie kilka metrów od telefonu. Miej telefon przy sobie.  
+`,
+        ImageUrl: "",
+        NextId: "ms:ready"
+    },
+    {
+        Id: "ms:ready",
+        Type: "page",
+        Content: `### Gotowe!
+
+Masz już przygotowanie teoretyczne i praktyczne. Sprawdź wszystko dwa razy i przyzwyczaj ucho do słuchawki.  
+
+*Pamiętaj by doładnie czyścić ucho przed każdym włożeniem słuchawki!*
+
+Jeśli masz z czymś problem - przejdź do następnego kroku
 `,
         ImageUrl: "",
         NextId: "ms:problems"
