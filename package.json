@@ -17,14 +17,14 @@
     "push:apps": "curl -X POST -F file=@dist.zip http://apps.specteam.pl/upload-web-app/%npm_package_name%",
     "push:self": "curl -X POST -F file=@dist.zip https://tutorial.specteam.pl/deploy",
     "deploy:apps": "npm run deploy:prepare && npm run build && npm run zip && npm run push:apps && npm run deploy:clean",
-    "deploy:self": "npm run deploy:prepare && npm run build:prod && npm run zip && npm run push:self && npm run deploy:clean",
+    "deploy:self": "npm run deploy:prepare && npm run build:prod && npm run zip && npm run push:self",
     "deploy": "npm run deploy:self",
     "update": "npm i @tblabs/truffle"
   },
   "author": "tB",
   "license": "ISC",
   "dependencies": {
-    "@tblabs/truffle": "^1.17.3",
+    "@tblabs/truffle": "^1.19.13",
     "showdown": "^2.1.0"
   },
   "devDependencies": {

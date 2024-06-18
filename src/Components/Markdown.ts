@@ -11,8 +11,6 @@ import showdown from "showdown";
 
 export class Markdown extends Div
 {
-    public static Name = "Markdown";
-
     private options = { tables: true, tasklists: true, underline: true, strikethrough: true, backslashEscapesHTMLTags: true };
     private converter = new showdown.Converter(this.options);
 

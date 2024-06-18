@@ -15,6 +15,7 @@ Select.DefaultCssClasses = "uk-select";
 ModalWindow.DefaultCssClasses = "tf-modal-window";
 ModalWindow.Hook = Root.Hook;
 
+
 const slides = [
     {
         Id: "start",
@@ -25,8 +26,8 @@ Niniejszy poradnik ma za zadanie pomóc w rozwiązaniu ewentualnych problemów j
 Pełna instrukcja obsługi znajduje się pod adresem [watcher.specteam.pl#help](https://watcher.specteam.pl/#help) i należy się z nią bezwzględnie zapoznać!
 
 *Jeśli masz problem:*  
-- [Pomoc dotycząca już sparowanej słuchawki](#slide/ms:problems) 🦻  
-- [Pomoc dotycząca już połączonej kamery](#slide/led) 🎥  
+- [Pomoc dotycząca już sparowanej słuchawki](#slide/ms:problems)  
+- [Pomoc dotycząca już połączonej kamery](#slide/led)  
 
 *Jeśli chcesz coś uruchomić:*`,
         Options: [
@@ -187,24 +188,30 @@ Z naszych statystyk wynika, że wszyscy którzy poświęcili co najmniej kilka g
     },
 ]
 
-const root = new Root().Class("root")
+const root = new Root("body").Class("root")
 
-const _router = new Router();
-const _sf = new SlideFactory(_router);
-
-root.Append(
-    new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
-        .AddContent("slide/:id", ({ id }) =>
-        {
-            const slide = slides.find(x => x.Id == id)
-            return slide
-                ? _sf.Create(slide)
-                : new Span("Slide not found")
-        })
-        .AddDefaultContent(() =>
-        {
-            _router.GoToStart()
-            return new Link("Go to start").OnClick(() => _router.GoToStart())
-        })
-)
-
+try
+{
+    const _router = new Router();
+    const _sf = new SlideFactory(_router);
+    
+    root.Append(
+            new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
+                .AddContent("slide/:id", ({ id }) =>
+                {
+                    const slide = slides.find(x => x.Id == id)
+                    return slide
+                        ? _sf.Create(slide)
+                        : new Span("Slide not found")
+                })
+                .AddDefaultContent(() =>
+                {
+                    _router.GoToStart()
+                    return new Link("Go to start").OnClick(() => _router.GoToStart())
+                })
+        )
+}
+catch (ex)
+{
+    root.Append("Ex: " + ex.message)
+}
