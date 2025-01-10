@@ -24,7 +24,7 @@
   "author": "tB",
   "license": "ISC",
   "dependencies": {
-    "@tblabs/truffle": "^1.19.13",
+    "@tblabs/truffle": "^1.22.2",
     "showdown": "^2.1.0"
   },
   "devDependencies": {

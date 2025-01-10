@@ -14,7 +14,7 @@ export class Router
         this.Hash.value = `slide/start`;
     }
 
-    public GoToSlide(id)
+    public GoToSlide(id: string)
     {
         this.Hash.value = `slide/${id}`;
     }

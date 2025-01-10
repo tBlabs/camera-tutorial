@@ -51,12 +51,18 @@ export const iPhoneSlides = [
     {
         Id: "iPhone:on-off",
         Type: "page",
-        Content: "Wyłącz i włącz hotspota (Guzik `Dopuszczaj innych`).\n\n⚠️ *Pamiętaj by pozostawić telefon na tym ekranie na czas uruchamiania kamery! Bez tego urządzenie się nie podłączy.*",
+        Content: `Wyłącz i włącz hotspota (Guzik \`Dopuszczaj innych\`).  
+        
+### ⚠️ *Pozostaw telefon na tym ekranie na czas uruchamiania kamery!*  
+
+Bez tego urządzenie się nie podłączy!  
+  
+Jedną z wielu wad iPhonów jest właśnie to, że nie pozwalają na podłączanie się innym urządzeniom na czas bycia poza tym ekranem. Dlaczego producent tak to sobie wymyślił? Trudno powiedzieć. Na Androidach nie ma tego problemu.`,
         ImageUrl: "iphone/hot.png",
-        NextId: "iPhonw:wifi-warning"
+        NextId: "iPhone:wifi-warning"
     },
     {
-        Id: "iPhonw:wifi-warning",
+        Id: "iPhone:wifi-warning",
         Type: "page",
         Content: "⚠️ *Od tej pory nie dotykaj opcji związanych z Wifi!*\n\nPamiętaj, że moduł wifi, który zwyczajowo służy do odbierania danych teraz jest w stanie nadawania. Klikając ikone wifi uruchomisz odbieranie a tym samym wyłączysz router. Telefon tego nie komunikuje (choć czasem tak) a kamera przestaje po prostu działać.\n\nCo ciekawe dezaktywacja routera poprzez włączenie wifi nie jest widoczna w menu telefonu. Opcja \"Dopuszczaj innych\" nadal świeci się na zielono co może bardzo wprowadzać w błąd.",
         ImageUrl: "iphone/router-disable.jpg",

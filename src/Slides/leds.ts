@@ -58,11 +58,11 @@ Wejdź na stronę odbiornika, której adres znajdziesz w *SMS od nas* lub na *ka
 
 Zaloguj się i sprawdź czy wszystko jest w porządku. Jeśli nie - wybierz którąś z poniższych opcji:`,
         Options: [
-            { Label: "Brak obrazu", ImageUrl: "🚫", GoTo: "kamera:brak-obrazu" },
-            { Label: "Niewyraźny obraz", ImageUrl: "👓", GoTo: "kamera:niewyrazny-obraz" },
-            { Label: "Powolna transmisja", ImageUrl: "🐢", GoTo: "kamera:powolna-transmisja" },
-            { Label: "Za mała rozdzielczość", ImageUrl: "📺", GoTo: "kamera:mala-rozdzielczosc" },
-            { Label: "Brak obrazu podczas rozmowy", ImageUrl: "☎️", GoTo: "kamera:podczas-rozmowy" },
+            { Label: "Brak obrazu", Icon: "🚫", GoTo: "kamera:brak-obrazu" },
+            { Label: "Niewyraźny obraz", Icon: "👓", GoTo: "kamera:niewyrazny-obraz" },
+            { Label: "Powolna transmisja", Icon: "🐢", GoTo: "kamera:powolna-transmisja" },
+            { Label: "Za mała rozdzielczość", Icon: "📺", GoTo: "kamera:mala-rozdzielczosc" },
+            { Label: "Brak obrazu podczas rozmowy", Icon: "☎️", GoTo: "kamera:podczas-rozmowy" },
         ]
     },
 ]

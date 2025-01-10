@@ -19,8 +19,8 @@ Przytrzymaj te opcje i wejdź do ustawień.
 
 W polu \`Hasło\` wpisz *hotspot1password*. Wielkość znaków ma znaczenie!
 
-Pozostałe opcje raczej nie mają znaczenia, ale jeśli gdzieś w menu zauważysz opcje *wstecznej kompatybilności* lub podone - włącz je.  
-Szyfrowanie należy ustawić na *WPA2 PSK*. Warto też wyłączyć takie opcje jak *automatyczny hotstpot* czy *automatyczne wyłączanie*.
+Pozostałe opcje raczej nie mają znaczenia, ale jeśli gdzieś w menu zauważysz opcje *wstecznej kompatybilności* lub podobne - włącz je.  
+Szyfrowanie należy ustawić na *WPA2 PSK*. Warto też wyłączyć takie opcje jak *automatyczny hotspot* czy *automatyczne wyłączanie*.
 `,
         ImageUrl: "android/android-2.jpg",
         NextId: "led"

@@ -15,20 +15,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 	// Clean folder
 	$files = glob('./*.*'); 
 	foreach($files as $file){ 
-        if ($file == ".htaccess") continue;
+	  if(is_file($file)) {    
+	  if ($file == ".htaccess") continue;
+	  if ($file == "./.htaccess") continue;
         if ($file == "deploy.php") continue;
-        if ($file == "clean.php") continue;
-	  if(is_file($file)) {
-		 // echo "- ".$file."\n";
+        if ($file == "./deploy.php") continue;
+		//  echo "- ".$file."\n";
 		unlink($file); 
 	  }
 	}
-
+	
 	$pack = "dist.zip";
 	move_uploaded_file($_FILES['file']['tmp_name'], "./".$pack);
 	 
 	$extractPath = ".";
-		  
+		   
 	$zip = new ZipArchive; 
 	if ($zip->open($pack) === TRUE) 
 	{
@@ -42,28 +43,28 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
 			{ 
 				if(is_file($file)) 
 				{		
-					echo "- ".$file."\n";
+					//echo "- ".$file."\n";
 					
 					$cats = explode("\\", $file);
 					if (count($cats)> 1)
 					{
 						$last = array_pop($cats);
-						echo "   file: ".$last."\n";
+					//	echo "   file: ".$last."\n";
 
 						for ($i=0; $i<=count($cats); $i++)
 						{
 							$p = implode("/",array_slice($cats, 0, $i));
 							if ($p && !file_exists($p))
 							{
-								echo "   mkdir: ".$p . "\n";
+							//	echo "   mkdir: ".$p . "\n";
 								mkdir($p);
 							}
 						}
 						
 						$dir = implode("/", $cats);
-						rename($file, $dir."/".$last);
+						rename($file, $dir."/".$last);			
 					}
-					else echo "   nothing to explode"."\n";
+					//else echo "   nothing to explode"."\n";		
 				}
 			}
 					

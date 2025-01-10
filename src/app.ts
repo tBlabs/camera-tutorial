@@ -20,6 +20,35 @@ const slides = [
     {
         Id: "start",
         Type: "choose",
+        Title: `Wybierz opcje:`,
+        Options: [
+            { Label: "Pierwsze uruchomienie", Text: "Wybierze te opcje jeśli masz styczność z naszym sprzętem po raz pierwszy", ImageUrl: "unboxing.jpg", GoTo: "pierwsze-uruchomienie" },
+            { Label: "Rozwiązywanie problemów", Text: "Wybierze te opcje jeśli masz problem z którymś elementem zestawu", ImageUrl: "fixing.png", GoTo: "problem" },
+        ]
+    },
+    {
+        Id: "pierwsze-uruchomienie",
+        Type: "choose",
+        Title: `Co chcesz uruchomić?`,
+        Options: [
+            { Label: "Mikrokamerę", ImageUrl: "tx.jpg", GoTo: "choose-phone" },
+            { Label: "Mikrosłuchawkę", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
+            { Label: "Słuchawkę Nano", ImageUrl: "mag1.jpg", GoTo: "magnetic" },
+            { Label: "Przygotowanie telefonu", ImageUrl: "phone.jpg", GoTo: "phone:prepare" },
+        ]
+    },
+    {
+        Id: "problem",
+        Type: "choose",
+        Title: `Z czym masz problem?`,
+        Options: [
+            { Label: "Z Mikrokamerą", ImageUrl: "tx.jpg", GoTo: "led" },
+            { Label: "Z Mikrosłuchawką", ImageUrl: "ms.jpeg", GoTo: "ms:problems" },
+        ]
+    },
+    {
+        Id: "start-v0",
+        Type: "choose",
         Title: `### Samouczek
 
 Niniejszy poradnik ma za zadanie pomóc w rozwiązaniu ewentualnych problemów jak i w samodzielnym uruchomieniu sprzętu.  
@@ -35,6 +64,7 @@ Pełna instrukcja obsługi znajduje się pod adresem [watcher.specteam.pl#help](
             { Label: "Mikrosłuchawka", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
             { Label: "Słuchawka Nano", ImageUrl: "mag1.jpg", GoTo: "magnetic" },
             { Label: "Przygotowanie telefonu", ImageUrl: "phone.jpg", GoTo: "phone:prepare" },
+            { Label: "Jak zwrócić sprzęt?", ImageUrl: "package.png", GoTo: "package:prepare" },
         ]
     },
     {
@@ -48,9 +78,9 @@ Jeśli obawiasz się, że Twój telefon zacznie wydawać jakieś dźwięki podcz
 - *Podepnij słuchawki przewodowe* - w razie gdyby bluetooth się odłączyło telefon (w teorii) przekierować rozmowę na zwykłe słuchawki. Sprawdź czy Twój telefon się tak zachowa
 - *Wykonaj próbę* - sprawdzaj i testuj każdy możliwy scenariusz. Np. podczas rozmowy odsuń telefon na 20 metrów i sprawdź co się stanie kiedy telefon straci połączenie
 - *Zaklej głośniczki* - użyj grubej taśmy lub jakiegoś wyciszającego materiału i przyklej go do głośników
-- *Zdemontuj głośniki* - usuń z telefonu elementy emitujące dźwięki, jesli nie wiesz jak to zrboić - idź do serwisu
+- *Zdemontuj głośniki* - usuń z telefonu elementy emitujące dźwięki, jesli nie wiesz jak to zrobić - idź do serwisu
 
-### Spradź czas pracy
+### Sprawdź czas pracy
 
 Upewnij się, że Twój telefon "podoła" zadaniu i wytrzyma co najmniej tyle czasu ile potrzebujesz. W tym celu:
 - *Włącz hotspota i kamere*
@@ -60,6 +90,30 @@ Upewnij się, że Twój telefon "podoła" zadaniu i wytrzyma co najmniej tyle cz
 - *Używaj całego zestawu tak jak będziesz go używać podczas "akcji"* - dopiero taki test "powie" czy bateria w Twoim telefonie poradzi sobie z zadaniem
 
 Przy okazji w ten sposób wykonasz również próbę ogniw w zestawie. Zanim wejdziesz na salę musisz mieć pewność, że baterie (powerbank i pętla) są naładowane i wytrzymają tyle ile potrzebujesz.`,
+    },
+    {
+        Id: "package:prepare",
+        Type: "page",
+        Content: `### Jak odesłać sprzęt
+        
+- Zestaw należy odesłać jak najszybciej po jego wykorzystaniu. Najpóźniej w ostatnim dniu do kiedy był zarezerwowany lub następnego dnia rano.  
+- Przed wysyłką należy upewnić się, że nie brakuje wszystkich elementów. Zwłaszcza *ładowarek* i *kabli*.  
+- Zestawów nie należy czyścić jeśli są ubrudzone klejem po taśmach. Mikrosłuchawkę należy tylko przetrzeć na sucho papierem i wyjąć z niej baterie na czas podróży.  
+- Sprzętu nie trzeba ładować przed odesłaniem.  
+- Należy zadbać aby urządzenia w etui/pudełku nie latały luźno. W razie potrzeby należy wypełnić pojemnik czymś miękkim (folią bąbelkową lub papierem).  
+- Etui ze sprzętem na czas wysyłki należy umieścić w kopercie z folii bąbelkowej lub pudełku. Nie należy wkładać samego etui bezpośrednio do paczkomatu!
+
+Zwrotu należy dokonać za pośrednictwem firmy **Inpost** na adres:
+
+*Paczkomat WAW02H*  
+*Człuchowska 2A, 01-100 Warszawa*  
+*specTeam*  
+*507-293-714*  
+*specteam@specteam.pl*  
+
+### Zwrot osobisty
+
+Zadzwoń pod numer ☎️ 507-293-714 i umów się na spotkanie.`
     },
     ...msSlides,
     ...msProblems,
@@ -114,7 +168,7 @@ Na przykład, co zrobisz jeśli:
     - Po wejściu na sale?
     - Po 10 minutach od wejścia na sale?
 - Co zrobią Twoi pomocnicy jeśli to im przestanie działać internet?
-    - Czy mają zapasowae łącze? Np. w postaci hotspota w telefonie
+    - Czy mają zapasowe łącze? Np. w postaci hotspota w telefonie
 - A co jeśli zawiesi im się komputer? Czy mają zapasowy?
 - Co jeśli przerwie Wam rozmowe?
     - Czy wiesz jak przywrócić łączność bez sięgania po telefon? Da się to zrobić
@@ -167,13 +221,13 @@ Warto też zadać sobie bardziej ekstremalne pytania:
 
 Uwaga! 
 Odpowiedzią na powyższe pytania *nie* jest "zadzwonię na infolinie i zapytam", bo nie będzie na to czasu.
-Nigdy nie zakładaj, że odbierzemy telefon akurat wtedy kiedy coś się stanie. Bądź gotowy za wczasu!
+Nigdy nie zakładaj, że odbierzemy telefon akurat wtedy kiedy coś się stanie. Bądź gotowy zawczasu!
 Odpowiedź na większość pytań można znaleźć w instrukcjach obsługi, które trzeba bezwzględnie znać!
 
 Pamiętaj!
 Podczas testowania wychodzą wszelkie niuanse korzystania ze sprzętu.
 Warto także w trakcie prób specjalnie spowodować kilka awarii i przemyśleć swoje zachowanie w ich wyniku.
-Stres może być ogromny dlatego tym bardziej warto wszystko sobie przemyśleć za wczasu.
+Stres może być ogromny dlatego tym bardziej warto wszystko sobie przemyśleć zawczasu.
 Bardzo przydatne jest także umówienie się z pomocnikami na pewne sygnały dźwiękowe: np. chrząknięcie może oznaczać, że potrzebujesz powtórzyć ostatnie zdanie, a pstryknięcie długopisem, że za szybko Ci dyktują. Warto o tyle, że w praktyce zwykle nie ma czasu na pisanie na kartce "cofnij mi do zadania czwartego" i trzeba komunikować się szybciej. 
 
 Ze wszystkich opisanych problemów najgorszy jest stres. To przez niego przestajemy racjonalnie myśleć i wpadamy w panikę kiedy coś idzie nie tak. Dlatego tak ważna jest symulacja każdej potencjalnie niebezpiecznej sytuacji.
@@ -181,9 +235,9 @@ Ze wszystkich opisanych problemów najgorszy jest stres. To przez niego przestaj
 Wiele osób zabezpiecza się przed niepowodzeniem dublując wszystko co możliwe. Wielu naszych klientów korzysta często z dwóch zestawów jednocześnie. Mają dwie kamery, podłączone do dwóch różnych telefonów, w dwóch różnych sieciach. 
 Na szyjach mają dwie pętle różnych producentów, a w pogotowiu zapasową słuchawke.
 Niewątpliwie warto mieć przy sobie drugi telefon, dodatkowy powerbank czy ładowarkę. 
-W 99% przypadków wystarcza pojedyńczy zestaw i nadmiarowe dublowanie nie poprawia wyniku, ale niewątpliwe podnosi poziom spokoju.
+W 99% przypadków wystarcza pojedynczy zestaw i nadmiarowe dublowanie nie poprawia wyniku, ale niewątpliwe podnosi poziom spokoju.
 Pierwszy raz jest zawsze stresujący. Każdy kolejny coraz łatwiejszy. Dlatego tym bardziej warto przeprowadzać próby wśród ludzi, np w kawiarni czy gdzieś gdzie może ktoś na nas patrzeć. W domowym zaciszu wszystko jest proste. Dopiero w terenie człowiek odkrywa swój brak przygotowania.  
-Z naszych statystyk wynika, że wszyscy którzy poświęcili co najmniej kilka godzin na trening - zaliczali z dobrym wynikiem. Ci którzy olali temat i czekali do ostatnij chwili - zaliczali w +/- 50%. Trening czyni mistrza! Pamiętaj o tym.
+Z naszych statystyk wynika, że wszyscy którzy poświęcili co najmniej kilka godzin na trening - zaliczali z dobrym wynikiem. Ci którzy olali temat i czekali do ostatniej chwili - zaliczali w +/- 50%. Trening czyni mistrza! Pamiętaj o tym.
 `,
     },
 ]
@@ -202,16 +256,17 @@ try
                     const slide = slides.find(x => x.Id == id)
                     return slide
                         ? _sf.Create(slide)
-                        : new Span("Slide not found")
+                        : new Span("Nie znaleziono slajdu")
                 })
                 .AddDefaultContent(() =>
                 {
                     _router.GoToStart()
-                    return new Link("Go to start").OnClick(() => _router.GoToStart())
-                })
+                    return new Link("Powrót do strony głównej").OnClick(() => _router.GoToStart())
+                }),
         )
 }
-catch (ex)
+catch (ex: any)
 {
-    root.Append("Ex: " + ex.message)
+    root.Append("Błąd podczas ładowania treści")
+    console.error(ex.message)
 }

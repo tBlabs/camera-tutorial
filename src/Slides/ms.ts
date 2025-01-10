@@ -4,12 +4,12 @@ export const msProblems = [
         Type: "choose",
         Title: `Poniżej znajduje się lista potencjalnych problemów, które nie powinny wystąpić przy normalnym użytkowaniu. Jeśli jednak coś jest nie tak zacznij od tej listy:`,
         Options: [
-            { Label: "Nic nie słychać", ImageUrl: "🔇", GoTo: "ms:brak-dzwieku" },
-            { Label: "Słabo słychać", ImageUrl: "🔈", GoTo: "ms:niska-glosnosc" },
-            { Label: "Słychać za głośno", ImageUrl: "📢", GoTo: "ms:za-glosno" },
-            { Label: "Słychać na zewnątrz", ImageUrl: "🦻", GoTo: "ms:slychac" },
-            { Label: "Występują zakłócenia", ImageUrl: "📡", GoTo: "ms:zaklocenia" },
-            { Label: "Brak połączenia", ImageUrl: "🔗", GoTo: "ms:brak-polaczenia" },
+            { Label: "Nic nie słychać", Icon: "🔇", GoTo: "ms:brak-dzwieku" },
+            { Label: "Słabo słychać", Icon: "🔈", GoTo: "ms:niska-glosnosc" },
+            { Label: "Słychać za głośno", Icon: "📢", GoTo: "ms:za-glosno" },
+            { Label: "Słychać na zewnątrz", Icon: "🦻", GoTo: "ms:slychac" },
+            { Label: "Występują zakłócenia", Icon: "📡", GoTo: "ms:zaklocenia" },
+            { Label: "Brak połączenia", Icon: "🔗", GoTo: "ms:brak-polaczenia" },
         ]
     },
     {
@@ -20,7 +20,7 @@ export const msProblems = [
 Powodów braku dźwięku w słuchawce może być kilka. Szukając usterki upewnij się, że:
 - *Słychać szum w słuchawce* - Słuchawka powinna delikatnie szumieć po włożeniu baterii. Jeśli tego nie robi to najprawdopodobniej bateria nie została włożona lub wyczerpała się
 - *Słuchawka nie jest zapchana* - Zanieczyszczenie słuchawki woskowiną spowoduje znaczne obniżenie głośności. Słuchawki nie da się samodzielnie wyczyścić, dlatego tak ważne jest dbanie o czystość ucha
-- *Pętla indukcyjna jest na szyji* - Jej skuteczny zasięg pracy wynosi max 50cm
+- *Pętla indukcyjna jest na szyi* - Jej skuteczny zasięg pracy wynosi max 50cm
 - *Pętla jest naładowana i włączona* - Jeśli nie miga żadna dioda oznacza to brak prądu
 - *Pętla jest sparowana z telefonem* - Musisz mieć pewność, że pętla jest połączona za pomocą Bluetooth z Twoim telefonem
 - *Trwa połączenie głosowe* - Upewnij się, że "ktoś jest na linii" i nie mówi szeptem
@@ -37,7 +37,7 @@ Jeśli powyższe sprawdzenia nie przyniosły efektu:
         Content: `### Za cicho
         
 Zbyt niska głośność może być oznaką:
-- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być najdalej na szyji
+- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być najdalej na szyi
 - *Słaba bateria w słuchawce* - Spróbuj włożyć nową
 - *Zapchana słuchawka* - Woskowina mogła zablokować wylot dźwięku
 - *Ustawiona zbyt niska głośność* - Ustaw w telefonie maksymalną głośność rozmowy
@@ -50,7 +50,7 @@ Zbyt niska głośność może być oznaką:
         Content: `### Zbyt głośno
         
 Wysoka głośność może być oznaką:
-- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być na szyji
+- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być na szyi
 - *Ustawiona jest zbyt wysoka głośność* - Ustaw w telefonie mniejszą głośność rozmowy
 `,
         NextId: "contact"
@@ -125,7 +125,7 @@ Zakręć i włóż słuchawkę do *czystego ucha*. Powinien być słyszalny szum
         Title: `### Pętla indukcyjna 
         
 Pętla łączy telefon z mikrosłuchawką za pomocą indukcji magnetycznej generowanej w cewce (to ten długi czarny element w oplocie przypominający sznurek - należy się z nim obchodzić delikatnie ponieważ jest zbudowany z cienkiego drutu, który może pęknąć).   
-Pętle należy umieścić na szyji zakładając ją przez głowę.  
+Pętle należy umieścić na szyi zakładając ją przez głowę.  
 Przed przystąpieniem do użytkowania należy ją sparować z telefonem.
         
 *Jaką pętle posiadasz?*`,
@@ -201,7 +201,7 @@ Działanie powyższych funkcji należy sprawdzić eksperymentalnie, ponieważ ka
 
 Masz już przygotowanie teoretyczne i praktyczne. Sprawdź wszystko dwa razy i przyzwyczaj ucho do słuchawki.  
 
-*Pamiętaj by doładnie czyścić ucho przed każdym włożeniem słuchawki!*
+*Pamiętaj by dokładnie czyścić ucho przed każdym włożeniem słuchawki!*
 
 Jeśli masz z czymś problem - przejdź do następnego kroku
 `,
@@ -210,9 +210,3 @@ Jeśli masz z czymś problem - przejdź do następnego kroku
     },
 ]
 
-
-
-// *Co dalej?*
-
-// Koniecznie zapoznaj się z pełną wersją instrukcji mikrosłuchawki: [watcher.specteam.pl](https://watcher.specteam.pl/#help/activation/ear)
-// Jest tam opisanych dużo detali, które mogą Ci uratować życie! 

@@ -1,4 +1,4 @@
-import { Button, Div, Image, Link } from "@tblabs/truffle";
+import { Button, Div, Image, Link, Span } from "@tblabs/truffle";
 import { Page } from './Page';
 import { Markdown } from '../Components/Markdown';
 import { Router } from '../Services/Router';
@@ -13,14 +13,19 @@ export class SlidePage extends Page
 
         this.middle.Append(
             new Markdown(slide.Content),
-            slide.ImageUrl && new Div().TextAlignCenter().Append(
-                new Image(slide.ImageUrl).WidthPercent(70).Border(5, "#fff")
-            )
+            slide.ImageUrl && new Div().TextAlignCenter()
+                .Append(
+                    new Image(slide.ImageUrl)
+                )
         )
 
+        this.SetSlide(slide)
+
         this.bottom.Append(
-            new Button("Cofnij", () => _router.GoBack()).Color("#fff"),
-            slide.NextId && new Button("Dalej", () => _router.GoToSlide(slide.NextId)).Background("#ff7b0d").Color("#111").MarginLeft(8),
+            slide.NextId && new Span().Attribute("uk-icon", "icon: chevron-right; ratio: 1")
+                .Class("uk-icon-button").Background("#ffa500")
+                .Style(`color: #fff; position: fixed; width: 64px; height: 64px; bottom: 16px; right: 16px;`)
+                .OnClick(() => _router.GoToSlide(slide.NextId))
         )
     }
 }
