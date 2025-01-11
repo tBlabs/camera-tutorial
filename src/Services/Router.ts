@@ -1,5 +1,6 @@
 import { HashRef } from "@tblabs/truffle";
 
+
 export class Router
 {
     public Hash = new HashRef();

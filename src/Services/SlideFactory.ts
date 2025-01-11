@@ -25,9 +25,11 @@ export class SlideFactory
         }
         catch (ex: any)
         {
-            console.error("SlideFactory error", ex)
+            console.error("SlideFactory error", ex);
+
             const errorPage = new Page(this._router);
             errorPage.middle.Append("Błąd podczas ładowania treści: nieznany rodzaj slajdu")
+
             return errorPage;
         }
     }

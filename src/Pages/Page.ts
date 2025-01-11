@@ -1,34 +1,61 @@
-import { Button, Div, Link, Span } from "@tblabs/truffle";
+import { Div, Span } from "@tblabs/truffle";
 import { Router } from "../Services/Router";
 import { ISlide } from "../Core/ISlide";
 
+
+export class TopButtonV1 extends Span
+{
+    constructor(icon: string, onClick: () => void)
+    {
+        super();
+
+        this.Attribute("uk-icon", `icon: ${icon};`)
+            .Class("uk-icon-button btn-color")
+            .OnClick(onClick)
+    }
+}
+
+export class TopButton extends Span
+{
+    constructor(icon: string, onClick: () => void, enabled: ()=> boolean = ()=>true)
+    {
+        super();
+        console.log('enabled', enabled);
+
+        this.Text(icon).Class("uk-icon-button btn-color")
+        .CursorPointer()
+     
+        this.OnClick(()=>enabled() && onClick())
+    }
+}
 
 export class Page extends Div
 {
     public top = new Div("top").TextAlignCenter()
         .Append(
-            // new Link("🏠 Start").OnClick(() => this._router.GoToStart()).FloatLeft(),
-            // new Link("Kontakt ☎️").OnClick(() => this._router.GoToHelp()).FloatRight(),
-            new Span().Attribute("uk-icon", "icon: chevron-left; ratio: 1").Class("uk-icon-button btn-color").FloatLeft().OnClick(() => this._router.GoBack()),
-            new Span().Attribute("uk-icon", "icon: home; ratio: 1").Class("uk-icon-button btn-color").OnClick(() => this._router.GoToStart()),
-            new Span().Attribute("uk-icon", "icon: receiver; ratio: 1").Class("uk-icon-button btn-color").MarginLeft(8).OnClick(() => this._router.GoToHelp()),
-            new Span().Attribute("uk-icon", "icon: chevron-right; ratio: 1").Class("uk-icon-button btn-color")
-            .FloatRight().OnClick(() => this._router.GoToSlide(this.slide?.NextId ?? "error-page"))
-            .Enable(!!this.slide?.NextId)
-            ,
+            // new TopButton("chevron-left", () => this._router.GoBack()).FloatLeft(),
+            // new TopButton("home", () => this._router.GoToStart()),
+            // new TopButton("receiver", () => this._router.GoToHelp()).MarginLeft(8),
+            // new TopButton("chevron-right", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page")).FloatRight()
+            new TopButton("◂", () => this._router.GoBack()).FloatLeft(),
+            new TopButton("🏠", () => this._router.GoToStart()),
+            new TopButton("☎️", () => this._router.GoToHelp()).MarginLeft(8),
+            new TopButton("▸", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page"), ()=>!!this.slide?.NextId).FloatRight()
         )
     public middle = new Div("middle")
     public bottom = new Div("bottom")
 
-    private slide!: ISlide | undefined;
+    private slide: ISlide | undefined;
     public SetSlide(slide: ISlide): this
     {
         this.slide = slide;
+        console.log('SetSlide', !!this.slide?.NextId);
         return this;
     }
     constructor(private _router: Router)
     {
         super("SlidePage uk-background-default");
+        console.log("Page constructor");
 
         this.Append(
             this.top,

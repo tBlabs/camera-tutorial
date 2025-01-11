@@ -1,4 +1,4 @@
-import { Button, Div, Image, Link, Span } from "@tblabs/truffle";
+import { Div, Image, Span } from "@tblabs/truffle";
 import { Page } from './Page';
 import { Markdown } from '../Components/Markdown';
 import { Router } from '../Services/Router';
