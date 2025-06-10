@@ -55,8 +55,7 @@ try
             })
             .AddDefaultContent(() =>
             {
-                _router.GoToStart()
-                return new Link("Powrót do strony głównej").OnClick(() => _router.GoToStart())
+                return _sf.Create(start[0]);
             }),
     )
 }

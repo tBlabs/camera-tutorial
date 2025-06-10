@@ -12,7 +12,7 @@ Jeśli nie udało Ci się samodzielnie poradzić sobie z problemem skorzystaj z 
 🌐 Strona kontaktu: [www.specteam.pl/Kontakt](https://specteam.pl/Kontakt)
 
 `,
-    NextId: "o-czym-jeszcze-warto-pomyslec"
+    NextId: "inne-sprawy"
 },
 {
     Id: "o-czym-jeszcze-warto-pomyslec",
