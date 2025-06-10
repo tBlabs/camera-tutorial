@@ -17,15 +17,14 @@ export class TopButtonV1 extends Span
 
 export class TopButton extends Span
 {
-    constructor(icon: string, onClick: () => void, enabled: ()=> boolean = ()=>true)
+    constructor(icon: string, onClick: () => void, enabled: () => boolean = () => true)
     {
         super();
-        console.log('enabled', enabled);
 
         this.Text(icon).Class("uk-icon-button btn-color")
-        .CursorPointer()
-     
-        this.OnClick(()=>enabled() && onClick())
+            .CursorPointer()
+
+        this.OnClick(() => enabled() && onClick())
     }
 }
 
@@ -33,15 +32,12 @@ export class Page extends Div
 {
     public top = new Div("top").TextAlignCenter()
         .Append(
-            // new TopButton("chevron-left", () => this._router.GoBack()).FloatLeft(),
-            // new TopButton("home", () => this._router.GoToStart()),
-            // new TopButton("receiver", () => this._router.GoToHelp()).MarginLeft(8),
-            // new TopButton("chevron-right", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page")).FloatRight()
             new TopButton("◂", () => this._router.GoBack()).FloatLeft(),
             new TopButton("🏠", () => this._router.GoToStart()),
             new TopButton("☎️", () => this._router.GoToHelp()).MarginLeft(8),
-            new TopButton("▸", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page"), ()=>!!this.slide?.NextId).FloatRight()
+            new TopButton("▸", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page"), () => !!this.slide?.NextId).FloatRight()
         )
+        
     public middle = new Div("middle")
     public bottom = new Div("bottom")
 

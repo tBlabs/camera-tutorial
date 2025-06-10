@@ -16,8 +16,7 @@ export class Markdown extends Div
 
     constructor(markdown?: string)
     {
-        super();
-        this.Style("padding: 0; margin: 0;");
+        super("markdown");
 
         const html = this.converter.makeHtml(markdown);
         this.Html(html);

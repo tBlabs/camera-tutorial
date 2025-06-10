@@ -40,22 +40,25 @@ try
 {
     const _router = new Router();
     const _sf = new SlideFactory(_router);
-    
+
     root.Append(
-            new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
-                .AddContent("slide/:id", ({ id }) =>
-                {
-                    const slide = slides.find(x => x.Id == id)
-                    return slide
-                        ? _sf.Create(slide)
-                        : new Span("Nie znaleziono slajdu")
-                })
-                .AddDefaultContent(() =>
-                {
-                    _router.GoToStart()
-                    return new Link("Powrót do strony głównej").OnClick(() => _router.GoToStart())
-                }),
-        )
+        new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
+            .AddContent("slide/:id", ({ id }) =>
+            {
+                const slide = slides.find(x => x.Id == id);
+
+                window.scrollTo(0, 0);
+
+                return slide
+                    ? _sf.Create(slide)
+                    : new Span("Nie znaleziono slajdu")
+            })
+            .AddDefaultContent(() =>
+            {
+                _router.GoToStart()
+                return new Link("Powrót do strony głównej").OnClick(() => _router.GoToStart())
+            }),
+    )
 }
 catch (ex: any)
 {

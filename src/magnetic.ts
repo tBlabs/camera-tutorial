@@ -47,6 +47,6 @@ Zwykle dajemy kulki w różnych rozmiarach. Należy dobrać właściwy eksperyme
 Kulkę można wyjąć tylko za pomocą cylindrycznego magnesu (tego długiego) dołączonego do zestawu. Wystarczy go zbliżyć do kulki wewnątrz ucha, by ta została wyciągnięta automatycznie.
 `,
         ImageUrl: "mag.jpg",
-        NextId: "contact"
+        NextId: "kontakt"
     },
 ];

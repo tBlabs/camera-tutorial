@@ -29,7 +29,7 @@ Powodów braku dźwięku w słuchawce może być kilka. Szukając usterki upewni
 Jeśli powyższe sprawdzenia nie przyniosły efektu:
 - Przyłóż pętle bliżej ucha i włącz ją - powinien być słyszalny pisk. Jeśli go nie ma to najprawdopodobniej cewka pętli została uszkodzona i należy ją wymienić,
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "ms:niska-glosnosc",
@@ -42,7 +42,7 @@ Zbyt niska głośność może być oznaką:
 - *Zapchana słuchawka* - Woskowina mogła zablokować wylot dźwięku
 - *Ustawiona zbyt niska głośność* - Ustaw w telefonie maksymalną głośność rozmowy
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "ms:za-glosno",
@@ -53,7 +53,7 @@ Wysoka głośność może być oznaką:
 - *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być na szyi
 - *Ustawiona jest zbyt wysoka głośność* - Ustaw w telefonie mniejszą głośność rozmowy
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "ms:zaklocenia",
@@ -63,7 +63,7 @@ Wysoka głośność może być oznaką:
 Zakłócenia w słuchawce w postaci buczenia bądź pisku mogą być oznaką przebywania w otoczeniu czegoś co te zakłócenia emituje (świetlówka, silnik elektryczny, silnik samochodu, silne pole magnetyczne itp). W takim wypadku warto zmienić otoczenie. Jeśli mimo to problemy nadal występują należy upewnić się, że:
 - *Klapka baterii jest dobrze dokręcona* - Słabe dociśnięcie baterii może powodować trzaski
 - *Bateria w słuchawce nie jest stara* - Słaba bateria może czasem objawiać się delikatnym piskiem`,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "ms:brak-polaczenia",
@@ -74,7 +74,7 @@ Może być spowodowany:
 - *Nieudanym parowaniem pętli z telefonem* - Wykonaj procedure ponownie i upewnij się, że telefon "widzi" pętle
 - *Nie wybraniem bluetooth na czas rozmowy* - Dzwoniąc upewnij się, że rozmowa jest przekierowana na bluetooth
 - *Bycie poza zasięgiem bluetooth* - Efektywny zasięg bluetooth to kilka metrów. Nie odchodź za daleko od pętli`,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "ms:slychac",
@@ -86,7 +86,7 @@ Jeżeli Twojego rozmówcę słychać poza uchem, w którym jest słuchawka oznac
 - *Ścisz rozmowę* - użyj regulatora głośności w telefonie by obniżyć głośność. Jeśli ten nie działa - zmień telefon
 - *Odsuń pętle od słuchawki* - odległość pętli od słuchawki ma duży wpływ na głośność
 - *Poproś swojego rozmówcę by mówił ciszej* - siła głosu "po drugiej stronie" również ma znaczenie`,
-        NextId: "contact"
+        NextId: "kontakt"
     },
 ]
 export const msSlides = [

@@ -1,5 +1,5 @@
 export const contact = [ {
-    Id: "contact",
+    Id: "kontakt",
     Type: "page",
     Content: `### Pomoc
 
@@ -11,13 +11,11 @@ Jeśli nie udało Ci się samodzielnie poradzić sobie z problemem skorzystaj z 
 
 🌐 Strona kontaktu: [www.specteam.pl/Kontakt](https://specteam.pl/Kontakt)
 
-### O czym jeszcze warto pomyśleć?
-
-Kliknij \`Dalej\``,
-    NextId: "what-else"
+`,
+    NextId: "o-czym-jeszcze-warto-pomyslec"
 },
 {
-    Id: "what-else",
+    Id: "o-czym-jeszcze-warto-pomyslec",
     Type: "page",
     Content: `### O czym jeszcze warto pomyśleć
 

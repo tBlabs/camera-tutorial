@@ -3,17 +3,17 @@ export const leds = [
         Id: "led",
         Type: "choose",
         Title: `### Uruchomienie kamery
-Podłącz kamere do powerabanka. Można użyć dowolnego kabla mini-USB jak i dowolnego powerbanka. Ten dostarczony przez nas powinien wystarczyć na co najmniej 4 godziny pracy.
+Podłącz kamere do powerabanka. Można użyć dowolnego kabla mini-USB lub USB-C (zależnie od modelu kamery) jak i dowolnego powerbanka. Ten dostarczony przez nas powinien wystarczyć na co najmniej 4 godziny pracy.
 
 ![Połączenie](connection.jpeg)
 
-Odczekaj około **50 sekund**, aż kamera się uruchomi.  
+Odczekaj około **45 sekund**, aż kamera się uruchomi.  
 
 Przy gniazdku zasilania kamery znajduje się dioda.\n\n*Na jaki miga kolor?*`,
         Options: [
             { Label: "🟢 Zielony", ImageUrl: "green.jpeg", GoTo: "led-green" },
             { Label: "🔴 Czerwony", ImageUrl: "red.jpeg", GoTo: "red-led" },
-            { Label: "🟢lub🔴 Światło ciągłe", ImageUrl: "red.jpeg", GoTo: "const-led" },
+            { Label: "🟢lub🔴\nŚwiatło ciągłe", ImageUrl: "red.jpeg", GoTo: "const-led" },
             { Label: "⚪ Nie miga", ImageUrl: "noled.jpeg", GoTo: "no-led" },
         ]
     },
@@ -26,26 +26,26 @@ Powodów może być kilka:
 - *Hotspot nie udostępnia internetu* - upewnij się, że transmisja danych w telefonie jest włączona oraz że rozmowa telefoniczna nie blokuje transmisji,
 - *Hotspot jest poza zasięgiem* - kamera musi znajdować się w odległości maksymalnie kilku metrów od telefonu`,
         ImageUrl: "",
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "no-led",
         Type: "page",
-        Content: `Kamera potrzebuje około 50 sekund aby się uruchomić. Brak światła może oznaczać, że:
+        Content: `Kamera potrzebuje około 45 sekund aby się uruchomić. Brak światła może oznaczać, że:
 - *Nie upłyneło jeszcze dość czasu* - odczekaj co najmniej minute,
 - *Brak zasilania* - sprawdź czy powerbank działa, powinna się palić na nim jakaś dioda,
 - *Uszkodzony przewód USB* - należy wymienić na dowolny inny
 
 Jeśli to żadna z powyższych przyczyn - skontaktuj się z naszą infolinią.`,
         ImageUrl: "",
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "const-led",
         Type: "page",
         Content: `W teorii światło ciągłe diody kontrolnej nie jest możliwe. Upewnij się, że patrzysz na właściwą lampke - tą przy gnieździe zasilania. Jeśli jesteś absolutnie pewien, że to właściwa dioda, pozostaje tylko jedna możliwość - kamera się zawiesiła. Odłącz ją od prądu i podłącz ponownie. Zgłoś problem na infolinii ponieważ nie powinien nigdy wystąpić.`,
         ImageUrl: "",
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "led-green",

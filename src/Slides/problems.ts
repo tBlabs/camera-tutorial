@@ -10,7 +10,7 @@ Jeżeli po zalogowaniu się na stronie nie widzisz podglądu z kamery sprawdź:
 
 Obserwuj diodę na kamerze. Jeśli zaczęła migać na czerwono oznacza to problem z hotspotem. Sprawdź czy ten na pewno działa.
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "kamera:niewyrazny-obraz",
@@ -26,7 +26,7 @@ Jeśli dobrze widoczna jest tylko część kartki a reszta jest rozmazana oznacz
 
 Zwróć również uwagę na to by podczas montażu w odzieży guzik nie obrócił się samoistnie.
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "kamera:powolna-transmisja",
@@ -42,7 +42,7 @@ Jeśli natomiast czas przesłania zdjęcia przekracza 5 sekund może to oznacza�
 - *Operator ogranicza internet na czas rozmowy* - niektórzy operatorzy ograniczają transmisje danych podczas rozmowy telefonicznej. Rozłącz sie i sprawdź jak zareaguje kamera,
 - *Ustawiona jest zbyt duża rozdzielczość* - i ważące dużo zdjęcia potrzebują więcej czasu na przesłanie, ich rozdzielczość można zmienić wybierakiem w prawym górnym rogu aplikacji do podglądu,
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "kamera:mala-rozdzielczosc",
@@ -56,7 +56,7 @@ Im większe jest zdjęcie - tym dłużej będzie przesyłane.
 Jeśli mimo zwiększenia rozdzielczości obraz nadal jest niewyraźny - oznacza to problem z ostrością kamery (opisany w rozdziale "Niewyraźny obraz" w menu wyżej).
 
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
     {
         Id: "kamera:podczas-rozmowy",
@@ -65,12 +65,12 @@ Jeśli mimo zwiększenia rozdzielczości obraz nadal jest niewyraźny - oznacza 
         
 Ten problem jest związany z operatorem Twojej sieci, który nie udostępnia łącza internetowego podczas rozmowy telefonicznej (tak jakby zakładali, że skoro człowiek rozmawia to nie korzysta z internetu...).  
 W tej sytuacji jedyne co można zrobić to:
-- \`Udać się do swojego operatora i poprosić o włączenie internetu na czas rozmów\` - Czasem się to udaje, ale procedura trwa,
-- \`Kupić starter innego operatora\` - Nowy starter kosztuje kilka złotych i zwykle ma włączone wszystkie dostępne opcje,
-- \`Użyć drugiego telefonu do połączeń\` - Cały zestaw można skonfigurować tak by działał z dwoma telefonami: jeden do internetu dla kamery, drugi do połączeń głosowych,
-- \`Użyć aplikacji do połączeń głosowych zamiast połączenia GSM\` - Rozmowę można prowadzić przez Messengera lub inny komunikator, który wykorzystuje do połączeń internet a nie sieć GSM.
+- *Udać się do swojego operatora i poprosić o włączenie internetu na czas rozmów* - Czasem się to udaje, ale procedura trwa,
+- *Kupić starter innego operatora* - Nowy starter kosztuje kilka złotych i zwykle ma włączone wszystkie dostępne opcje,
+- *Użyć drugiego telefonu do połączeń* - Cały zestaw można skonfigurować tak by działał z dwoma telefonami: jeden do internetu dla kamery, drugi do połączeń głosowych,
+- *Użyć aplikacji do połączeń głosowych zamiast połączenia GSM* - Rozmowę można prowadzić przez Messengera lub inny komunikator, który wykorzystuje do połączeń internet a nie sieć GSM.
 
 `,
-        NextId: "contact"
+        NextId: "kontakt"
     },
 ]

@@ -7,7 +7,7 @@ export class Router
 
     public GoToHelp(): void
     {
-        this.Hash.value = `slide/contact`;
+        this.Hash.value = `slide/kontakt`;
     }
 
     public GoToStart(): void
