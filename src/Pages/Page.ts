@@ -3,18 +3,6 @@ import { Router } from "../Services/Router";
 import { ISlide } from "../Core/ISlide";
 
 
-export class TopButtonV1 extends Span
-{
-    constructor(icon: string, onClick: () => void)
-    {
-        super();
-
-        this.Attribute("uk-icon", `icon: ${icon};`)
-            .Class("uk-icon-button btn-color")
-            .OnClick(onClick)
-    }
-}
-
 export class TopButton extends Span
 {
     constructor(icon: string, onClick: () => void, enabled: () => boolean = () => true)
@@ -45,13 +33,11 @@ export class Page extends Div
     public SetSlide(slide: ISlide): this
     {
         this.slide = slide;
-        console.log('SetSlide', !!this.slide?.NextId);
         return this;
     }
     constructor(private _router: Router)
     {
         super("SlidePage uk-background-default");
-        console.log("Page constructor");
 
         this.Append(
             this.top,
