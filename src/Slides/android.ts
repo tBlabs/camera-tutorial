@@ -18,6 +18,8 @@ Przytrzymaj te opcje i wejdź do ustawień.
         Content: `W polu \`Nazwa hotspota\`, \`SSID\` lub podobnym wpisz *hotspot1*. Wielkość znaków ma znaczenie! Nie pomyl się!  
 
 W polu \`Hasło\` wpisz *hotspot1password*. Wielkość znaków ma znaczenie!
+   
+Docelowo ustaw hotspot na ten który otrzymasz w SMS od nas wraz z hasłem do serwisu - dzięki temu będziesz mieć pewność, że Twoja kamera łączy się tylko z Twoim telefonem.
 
 Pozostałe opcje raczej nie mają znaczenia, ale jeśli gdzieś w menu zauważysz opcje *wstecznej kompatybilności* lub podobne - włącz je.  
 Szyfrowanie należy ustawić na *WPA2 PSK*. Warto też wyłączyć takie opcje jak *automatyczny hotspot* czy *automatyczne wyłączanie*.

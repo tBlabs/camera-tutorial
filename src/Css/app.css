@@ -28,6 +28,7 @@ p {
 
 img {
     aspect-ratio: auto;
+    max-height: 640px;
 }
 
 .top {
