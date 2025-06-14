@@ -23,7 +23,7 @@ export const start = [{
     Type: "choose",
     Title: `Z czym masz problem?`,
     Options: [
-        { Label: "Z kamerą", ImageUrl: "tx.jpg", GoTo: "led" },
+        { Label: "Z kamerą", ImageUrl: "tx.jpg", GoTo: "led-green" },
         { Label: "Ze słuchawką", ImageUrl: "ms.jpeg", GoTo: "ms:problems" },
         
     ]

@@ -3,7 +3,11 @@ export const leds = [
         Id: "led",
         Type: "choose",
         Title: `### Uruchomienie kamery
-Podłącz kamere do powerabanka. Można użyć dowolnego kabla mini-USB lub USB-C (zależnie od modelu kamery) jak i dowolnego powerbanka. Ten dostarczony przez nas powinien wystarczyć na co najmniej 4 godziny pracy.
+
+*⚠️ Uważaj na obiektyw-guzik kamery. To delikatny element, którym nie należy kręcić, ponieważ służy do regulacji ostrości. Zachowaj szczególną ostrożność podczas montażu w odzieży.*
+
+Podłącz kamere do powerbanka. Można użyć dowolnego kabla mini-USB lub USB-C (zależnie od modelu kamery) jak i dowolnego powerbanka. 
+Ten dostarczony przez nas powinien wystarczyć na co najmniej 4 godziny pracy.
 
 ![Połączenie](connection.jpeg)
 
@@ -63,6 +67,7 @@ Zaloguj się i sprawdź czy wszystko jest w porządku. Jeśli nie - wybierz któ
             { Label: "Powolna transmisja", Icon: "🐢", GoTo: "kamera:powolna-transmisja" },
             { Label: "Za mała rozdzielczość", Icon: "📺", GoTo: "kamera:mala-rozdzielczosc" },
             { Label: "Brak obrazu podczas rozmowy", Icon: "☎️", GoTo: "kamera:podczas-rozmowy" },
+            { Label: "Inny problem", Icon: "🧱", GoTo: "led" },
         ]
     },
 ]

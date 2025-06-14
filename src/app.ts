@@ -11,6 +11,7 @@ import { prepare } from "./Slides/prepare";
 import { contact } from "./Slides/contact";
 import { start } from "./Slides/start";
 import { phone } from "./Slides/phone";
+import { detector } from "./Slides/detector";
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -32,6 +33,7 @@ const slides = [
     ...leds,
     ...cameraProblems,
     ...contact,
+    ...detector,
 ]
 
 const root = new Root("body").Class("root")

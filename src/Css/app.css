@@ -32,14 +32,12 @@ img {
 }
 
 .top {
-    /* flex: 0 0 auto; */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     padding: 8px;
-    /* color: #f8f8f8; */
     background: linear-gradient(#424242 0%, #313131 100%);
     border-bottom: 3px solid orange;
 }
@@ -98,7 +96,6 @@ img {
 h3 {
     font-size: 1.6rem;
     margin: 16px;
-    /* color: #f0506e; */
     color: #444;
 }
 
