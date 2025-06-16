@@ -70,4 +70,19 @@ Zaloguj się i sprawdź czy wszystko jest w porządku. Jeśli nie - wybierz któ
             { Label: "Inny problem", Icon: "🧱", GoTo: "led" },
         ]
     },
+    {
+        Id: "problem-z-kamera",
+        Type: "choose",
+        Title: `Z czym masz problem?`,
+        Options: [
+            { Label: "Dioda miga na czerwono", Icon: "🔴", GoTo: "red-led" },
+            { Label: "Brak migania diody", Icon: "⚪", GoTo: "no-led" },   
+            { Label: "Brak obrazu", Icon: "🚫", GoTo: "kamera:brak-obrazu" },
+            { Label: "Niewyraźny obraz", Icon: "👓", GoTo: "kamera:niewyrazny-obraz" },
+            { Label: "Powolna transmisja", Icon: "🐢", GoTo: "kamera:powolna-transmisja" },
+            { Label: "Za mała rozdzielczość", Icon: "📺", GoTo: "kamera:mala-rozdzielczosc" },
+            { Label: "Brak obrazu podczas rozmowy", Icon: "☎️", GoTo: "kamera:podczas-rozmowy" },
+            { Label: "Inny problem", Icon: "🧱", GoTo: "led" },
+        ]
+    },
 ]

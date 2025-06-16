@@ -1,6 +1,6 @@
 export const msProblems = [
     {
-        Id: "ms:problems",
+        Id: "problem-ze-sluchawka",
         Type: "choose",
         Title: `Poniżej znajduje się lista potencjalnych problemów, które nie powinny wystąpić przy normalnym użytkowaniu. Jeśli jednak coś jest nie tak zacznij od tej listy:`,
         Options: [
@@ -206,7 +206,7 @@ Masz już przygotowanie teoretyczne i praktyczne. Sprawdź wszystko dwa razy i p
 Jeśli masz z czymś problem - przejdź do następnego kroku
 `,
         ImageUrl: "",
-        NextId: "ms:problems"
+        NextId: "problem-ze-sluchawka"
     },
 ]
 
