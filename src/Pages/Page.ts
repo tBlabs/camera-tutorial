@@ -20,10 +20,10 @@ export class Page extends Div
 {
     public top = new Div("top").TextAlignCenter()
         .Append(
-            new TopButton("◂", () => this._router.GoBack()).FloatLeft(),
+            new TopButton("◀", () => this._router.GoBack()).FloatLeft(),
             new TopButton("🏠", () => this._router.GoToStart()),
             new TopButton("☎️", () => this._router.GoToHelp()).MarginLeft(8),
-            new TopButton("▸", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page"), () => !!this.slide?.NextId).FloatRight()
+            new TopButton("▶", () => this._router.GoToSlide(this.slide?.NextId ?? "error-page"), () => !!this.slide?.NextId).FloatRight()
         )
         
     public middle = new Div("middle")

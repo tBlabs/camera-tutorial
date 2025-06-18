@@ -36,6 +36,38 @@ export const start = [{
     ]
 },
 {
+    Id: "bezpieczenstwo",
+    Type: "page",
+    Content: `### Bezpieczeństwo
+
+#### Detektory nadajników (wifi/bluetooth/etc)
+
+Przez detektor nadajników rozumiemy proste wskaźniki promieniowania radiowego. W najprostszej acz skuteczej wersji są to względnie tanie i proste w obsłudze urządzenia, które mają stosunkowo niewielki zasięg. Trzeba podejść z nimi dosyć blisko do źródła promieniowania (czyli do nas kiedy mamy na sobie kamerę lub inny sprzęt), na odległość mniejszą niż metr co z pewnością zdążymy zauważyć...
+
+Przed takimi detektorami względnie łatwo się ukryć. Wymaga to jednak odrobiny sprytu:
+- trzeba jak najszybciej dać znać pomocnikowi by zerwał połączenie telefoniczne,
+- wyłączyć kamerę rozłączając ją z powerbankiem,
+- wyłączyć bluetooth przytrzmując przycisk na kilka sekund,
+
+Wszystkie te czynności da się wykonać przez ubranie bez wzbudzania podejrzeń. Warto przećwiczyć sobie taki scenariusz w domu.  
+Samo przywrócenie połączenia również nie powinno być trudne.
+
+#### Wykrywacze metali
+
+Klasyczny ręczny wykrywacz ma niezbyt dużą czułość i trzeba go przyłożyć na prawdę blisko by zaczął reagować. Jeśli ktoś tylko nim przed nami pomacha to raczej nie ma szans żeby coś znalazł.  
+Dla pewności zawsze warto mieć na sobie coś metalowego: łańcuszek, zegarek, pasek z metalową klamrą itp. Szanse że każą nam się z tego rozbierać są raczej niewielkie.
+
+Te znacznie trudniej oszukać aczkolwiek w naszej ofercie posiadamy sprzęt niewykrywalny przez takie detektory.  
+Szczegóły na stronie sklepu [https://specteam.pl](https://specteam.pl)
+
+#### Aplikacje szukające bluetooth
+
+O ile prawdą jest, że takie aplikacje istnieją o tyle stwierdzenie za ich pomocą gdzie znajduje się konkretne urządzenie jest kompletną nieprawdą. Takie rozpoznanie wymaga co najmniej kilku anten i fachowej wiedzy. 
+
+Jeśli mimo to nie chcesz ryzykować zawsze możesz posłużyć się jednym z naszych niewykrywalnych urządzeń. [Szczegóły na stronie sklepu](https://specteam.pl)
+  `
+},
+{
     Id: "wlaczanie",
     Type: "page",
     Content: `### Włączanie i wyłączanie
@@ -103,11 +135,6 @@ Co ważne - współdzieląc link do zapisanych zdjęć nie przekazujesz bezpośr
 #### Status
 
 Na samym dole strony znajduje się pasek statusu, który informuje o stanie połączenia i transmisji.
-
-    
-    
-    
-    
     `
 },
 {

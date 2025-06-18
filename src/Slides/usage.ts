@@ -34,9 +34,24 @@ Należy pamiętać, że im większa rozdzielczość zdjęcia tym dłużej będzi
 
 ![Regulacja rozdzielczości](camera/resolution.png)
 
-Opcje z żaróweczką 💡 delikatnie rozjaśnia obraz i zwiększa kontrast.
+Opcje z żaróweczką 💡 delikatnie rozjaśnia obraz i zwiększa kontrast.`
+},   
+{
+    Id: "kalibracja-sluchawki",
+    Type: "page",
+    Content: `### Regulacja głośności
 
-   `
+##### Na głośność w słuchawce wpływa wiele czynników:
+- ułożenie słuchawki w uchu: i nie chodzi tu tylko o głębokość ale również o kąt wokół własnej osi, który może mieć wpływ nawet na 80% głośności,
+- stan baterii w słuchawce: rozładowana bateria sprawia że słuchawka działa ciszej, ale biorąc pod uwagę długi czas pracy na baterii (ok 10 godzin) nie ma to większego znaczenia,
+- odległość od cewki pętli indukcyjnej: im bliżej tym głośniej, pętla nie powinna być dalej niż na wysokości szyji, jej realny zasięg wynosi max pół metra,
+- głośność w telefonie,
+- regulator na pętli o ile pętla takowy posiada
+
+##### Co nie ma wpływu na głośność:
+- stan naładowania pętli indukcyjnej: nie ma żadnego znaczenia,
+- stan naładowania telefonu: nie ma żadnego znaczenia
+`
 },   
 {
     Id: "ladowanie-kamery",
