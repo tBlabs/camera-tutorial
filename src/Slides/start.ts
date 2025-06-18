@@ -68,6 +68,43 @@ Jeśli mimo to nie chcesz ryzykować zawsze możesz posłużyć się jednym z na
   `
 },
 {
+    Id: "przechowywanie",
+    Type: "page",
+    Content: `### Przechowywanie
+
+Sprzęt należy przechowywać zawsze wyłączony. Dotyczy to szczególnie mikrosłuchawki bateryjnej, która reaguje na zmiany pola elektormagnetycznego w swoim otoczeniu i zużywa baterię.
+
+Odkładając sprzęt na dłużej warto go naładować i doładowywać co najmniej raz na pół roku.
+
+Ważne też zadbać o czystość elementów, szczególnie słuchawki, która miała styczność ze skórą.
+
+Wszelkie kable powinny zostać rozłączone.
+
+Pętli indukcyjnej nie należy zbyt mocno skręcać. Powinna leżeć w miarę luźno, złożona maksymalnie 4 razy na kształ ósemki.
+
+Nowe baterie do słuchawki mogą być przechowywane przez kilka lat. W miarę degradacji pokryją się białym nalotem - należy je wtedy wymienić na nowe.  
+Żywotność ogniw (akumulatorów) w innych urządzeniach wynosi kilka lat. Nasze najstarsze urządzenia mają po 8 i więcej lat i nadal zachowują wystarczający czas pracy (za minimum przyjmujemy 4 godzin ciągłego działania).
+  `
+},
+{
+    Id: "komunikacja",
+    Type: "page",
+    Content: `### Komunikacja
+
+Sprawna komunikacja z pomocnikiem jest kluczem do sukcesu. Dobry "Operator" ma niełatwe zadanie: musi zadbać o łączność jak i o "poprawne odpowiedzi". To duże obciążenie dla jednej osoby dlatego warto zawsze rozważyć co najmniej dwóch pomocników.
+
+W sprawnej komunikacji pomaga przede wszystkim trening - im więcej tym lepiej. Podczas prób wychodzą drobne niuanse, takie jak na przykład co robić w czasie kiedy połączenie zostanie z jakiegoś powodu zerwane lub zwyczajnie czegoś nie dosłyszymy, bo na przykład ktoś dyktuje za szybko.
+
+Niewątpliwie warto wykorzystać fakt, że w zestawie jest mikrofon i na przykład umówić się na jakieś sygnały. Będzie to zdecydowanie szybsze niż pisanie czegoś na kartce i pokazywanie tego kamerą.
+
+Dobrą praktyką jest też pytanie przez pomocnika osoby na sali *czy wszystko zrozumiała*, a w przypadku braku potwierdzenia zapytanie *czy czegoś nie zrozumiała*.
+
+Najtrudniejszą rzeczą jest samo nawigowanie kamerą, kiedy słyszymy tylko komunikaty lewo/prawo. Takie informacje nie są zbyt precyzyjne i lepiej jest mówić coś w stylu: "przesuń kartkę 5cm w prawo" niż "przesuń w lewo".
+
+Sprawnie przerprowadzona akcja charakteryzuje się tym, że samo przesłanie zdjęć zajmuje góra kilka minut. Potem Operator pracuje tylko na zapisanych zdjęciach. Dzięki tmeu można zaoszczędzić sporo czasu na ponowne celowanie w papier.
+  `
+},
+{
     Id: "wlaczanie",
     Type: "page",
     Content: `### Włączanie i wyłączanie
