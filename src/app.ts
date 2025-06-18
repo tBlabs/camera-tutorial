@@ -1,4 +1,4 @@
-import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Span, Link } from "@tblabs/truffle";
+import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Span, Link, Div } from "@tblabs/truffle";
 import { Router } from './Services/Router';
 import { SlideFactory } from './Services/SlideFactory';
 import { iPhoneSlides } from './Slides/iPhone';
@@ -12,6 +12,7 @@ import { contact } from "./Slides/contact";
 import { start } from "./Slides/start";
 import { phone } from "./Slides/phone";
 import { detector } from "./Slides/detector";
+import { hiding, usage } from "./Slides/usage";
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -33,6 +34,8 @@ const slides = [
     ...leds,
     ...cameraProblems,
     ...contact,
+    ...usage,
+    ...hiding,
     ...detector,
 ]
 
@@ -53,7 +56,7 @@ try
 
                 return slide
                     ? _sf.Create(slide)
-                    : new Span("Nie znaleziono slajdu")
+                    : new Div().Text("Nie znaleziono slajdu").Margin(32).TextAlignCenter()
             })
             .AddDefaultContent(() =>
             {
