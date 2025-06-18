@@ -36,6 +36,81 @@ export const start = [{
     ]
 },
 {
+    Id: "wlaczanie",
+    Type: "page",
+    Content: `### Włączanie i wyłączanie
+
+#### Włączenie kamery
+
+O ile kamera nie posiada przycisku wystarczy podłączyć ją do powerbanka i odczekać około 45 sekund. Stan włączenia zostanie zasygnalizowany przez diodę znajdującą się przy porcie zasilania.
+
+#### Wyłączenie kamery
+
+O ile kamera nie posiada przycisku wystarczy odłączyć ją od powerbanka. Jeśli przycisk posiada - należy nacisnąć go dwa razy.
+
+#### Włączenie pętli indukcyjnej
+
+W zależności od modelu wystarczy przytrzymać przycisk przez 3 sekundy lub przełączyć suwak włącznika w pozycję "ON".
+
+#### Wyłączenie pętli indukcyjnej
+
+Przytrzymaj przycisk przez 3 sekundy lub przełącz suwak włącznika w pozycję "OFF".
+
+#### Włączenie słuchawki
+
+Włóż baterię do słuchawki.
+
+#### Wyłączenie słuchawki
+
+Wyjmij baterię ze słuchawki.
+    `
+},
+{
+    Id: "strona-odbiorcza",
+    Type: "page",
+    Content: `### Aplikacja odbiorcza
+
+Aplikacja jest de facto zwykłą stroną internetową, którą można otworzyć w przeglądarce. Nie wymaga instalowania ani specjalnych uprawnień.  
+
+Wystarczy znać hasło by z niej korzystać. Hasło zwykle dostarczamy SMSem na numer użytkownika lub z kartą dołączoną do zestawu.  
+
+Hasła są nadawane odgórnie i działają przez cały okres użytkowania sprzętu. Każdy nowy użytkownik zawsze otrzymuje nowe hasło.
+
+![Aplikacja odbiorcza](camera/app.png)
+
+#### Podgląd na żywo
+
+Aby uruchomić podgląd na żywo należy kliknąć guzik \`Przywróć podgląd\`. Parametry transisji można zmienić wybierakiem w prawym górnym rogu: do dyspozycji jest kilka opcji rozdzielczości jak również możliwość dowolnej regulacji parametrów transmisji po wybraniu \`Ustawienia własne\`.
+
+#### Stopklatki 
+
+Zasadniczym zadaniem aplikacji jest udostępnienie podglądu na żywo z kamery jak również możliwość zapisania wybranych ujęć. Do tego celu służy guzik \`Stopklatka\` tuż pod okienkiem podglądu.
+
+Podglądu zapisanych zdjęć można dokonać klikając na ich miniaturkę. Spowoduje to załadowanie zdjęcia do widoku podglądu na żywo. Aby przywrócić podgląd na żywo należy kliknąć guzik \`Przywróć podgląd\`.
+
+#### Zapis stopklatek
+
+Przeglądarka jest w stanie zachować w sposób persystentny tylko 5MB danych. Oznacza to że ilość zdjęć jaką jesteśmy w stanie zapisać jest ograniczona.  
+Pamięć aplikacji nie jest ograniczona i jest w stanie pomieścić tysiące zdjęć tak długo jak nie przeładujemy strony.
+
+#### Współdzielenie stopklatek
+
+Zapisane zdjęcia można wysłać na nasz serwer, gdzie będą przechowywane przez kilka dni. Użyj w tym celu ikonki chmurki przy każdej miniaturce.  
+Kliknij guzik \`Zapisz...\` aby dowiedzieć się jak uzyskać dostęp do zapisanych w ten sposób zdjęć.  
+
+Co ważne - współdzieląc link do zapisanych zdjęć nie przekazujesz bezpośredniego dostępu do podglądu na żywo.
+
+#### Status
+
+Na samym dole strony znajduje się pasek statusu, który informuje o stanie połączenia i transmisji.
+
+    
+    
+    
+    
+    `
+},
+{
     Id: "problem",
     Type: "choose",
     Title: `Z czym masz problem?`,
