@@ -30,6 +30,8 @@ export const start = [{
         { Label: "Ładowanie", Text: "Ładowanie i czas pracy", ImageUrl: "camera/ladowanie.jpg", GoTo: "ladowanie" },
         { Label: "Przechowywanie", Text: "Jak utrzymać sprzęt w gotowości i dobrym stanie", ImageUrl: "camera/magazyn.png", GoTo: "przechowywanie" },
         { Label: "Czyszczenie", Text: "Jak utrzymać sprzęt w gotowości i dobrym stanie", ImageUrl: "camera/czyszczenie.png", GoTo: "czyszczenie" },
+        { Label: "Komunikacja", Text: "Jak powinna wyglądać sprawna komunikacja z pomocnikiem?", ImageUrl: "camera/walkietalkie.jpg", GoTo: "komunikacja" },
+        { Label: "Bezpieczeństwo", Text: "Jak radzić sobie z detektorami podsłuchów, wykrywaczami metali czy aplikacjami", ImageUrl: "camera/wykrywacz.jpg", GoTo: "bezpieczenstwo" },
     ]
 },
 {
