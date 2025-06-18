@@ -11,13 +11,32 @@ export const usage = [
 {
     Id: "kalibracja-kamery",
     Type: "page",
-    Title: `Kalibracja kamery`,
-    Options: [
-        { Label: "Pierwsze uruchomienie", Text: "Wybierze te opcje jeśli masz styczność z naszym sprzętem po raz pierwszy", ImageUrl: "unboxing.jpg", GoTo: "pierwsze-uruchomienie" },
-        { Label: "Użytkowanie", Text: "Wskazówki na temat użytkowania, ukrywania, ładowania itd", ImageUrl: "usage.png", GoTo: "uzytkowanie" },
-        { Label: "Rozwiązywanie problemów", Text: "Wybierze te opcje jeśli masz problem z którymś elementem zestawu", ImageUrl: "fixing.png", GoTo: "problem" },
-        { Label: "Inne kwestie", Text: "Dowiedz się o czym jeszcze warto pomyśleć lub jak zwrócić sprzęt", ImageUrl: "package.png", GoTo: "inne-sprawy" },
-    ]
+    Content: `### Regulacja ostrości
+
+Focus kamery jest regulowany za pomocą guzika-obiektywu. Kręcąc nim przesuwamy punkt w którym widać najostrzej. Należy to robić niezwykle ostrożnie pamiętając, że nie wolno całkowicie wykręcać guzika ani wkręcać go za mocno (to może skutkować połamaniem matrycy).  
+Regulacji należy dokonywać bardzo powoli, dosłownie po 1-2mm co chwilę zerkając na docelowy obiekt.
+    
+*Guzik jest sklejony z obiektywem. Nie jest to jeden element i należy brać na to poprawkę. Choć klej jest bardzo wytrzymały to wszystko da się uszkodzić używając zbyt dużo siły. Zwłaszcza podczas montażu kamery w odzieży. Pamiętaj o tym!*
+    
+
+### Regulacja oświetlenia
+
+Kamera jest domyślnie przystosowana do pracy przy typowym "klasowym" oświetleniu, czyli świetlówkach o barwie około 4000K (światło białe, naturalne lub zimne).  
+W razie potrzeby światło można ustawić za pomocą aplikacji odbiorczej. W oknie podglądu znajduje się suwak regulacji jasności i kontrastu.
+
+![Regulacja jasności](camera/light.png)
+
+
+### Regulacja rozdzielczości
+
+Rozdzielczość regulujemy programowo za pomocą aplikacji odbiorczej. Nad okienkiem podglądu znajduje się wybierak pozwalający zmienić rozdzielczość na jedną z predefiniowanych lub dowolną własną.  
+Należy pamiętać, że im większa rozdzielczość zdjęcia tym dłużej będzie przesyłane.
+
+![Regulacja rozdzielczości](camera/resolution.png)
+
+Opcje z żaróweczką 💡 delikatnie rozjaśnia obraz i zwiększa kontrast.
+
+   `
 },   
 {
     Id: "ladowanie-kamery",

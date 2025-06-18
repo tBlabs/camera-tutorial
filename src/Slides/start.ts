@@ -25,6 +25,7 @@ export const start = [{
     Title: `Wybierz jedną z poniższych kategorii:`,
     Options: [
         { Label: "Włączanie i wyłączanie", Text: "Procedura uruchamiania i dezaktywacji", ImageUrl: "camera/switch.jpg", GoTo: "wlaczanie" },
+        { Label: "Aplikacja odbiorcza", Text: "Korzystanie ze strony podglądu", ImageUrl: "camera/app.png", GoTo: "strona-odbiorcza" },
         { Label: "Kalibracja", Text:"Wyreguluj sprzęt pod swoje potrzeby", ImageUrl: "camera/kalibracja.jpg", GoTo: "kalibracja" },
         { Label: "Ukrywanie", Text:"Jak dobrze ukryć zestaw", ImageUrl: "camera/koszula.jpg", GoTo: "ukrywanie" },
         { Label: "Ładowanie", Text: "Ładowanie i czas pracy", ImageUrl: "camera/ladowanie.jpg", GoTo: "ladowanie" },
