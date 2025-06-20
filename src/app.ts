@@ -12,7 +12,11 @@ import { contact } from "./Slides/contact";
 import { start } from "./Slides/start";
 import { phone } from "./Slides/phone";
 import { detector } from "./Slides/detector";
-import { hiding, usage } from "./Slides/usage";
+import { cleaning } from "./Slides/cleaning";
+import { usage } from "./Slides/usage";
+import { hiding } from "./Slides/hiding";
+import { calibration } from "./Slides/calibration";
+import { charging } from "./Slides/charging";
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -34,9 +38,12 @@ const slides = [
     ...leds,
     ...cameraProblems,
     ...contact,
-    ...usage,
     ...hiding,
     ...detector,
+    ...calibration,
+    ...charging,
+    ...cleaning,
+    ...usage,
 ]
 
 const root = new Root("body").Class("root")

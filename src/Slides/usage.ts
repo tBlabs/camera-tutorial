@@ -1,172 +1,141 @@
+
 export const usage = [
-{
-    Id: "kalibracja",
-    Type: "choose",
-    Title: `Co chcesz skalibrować?`,
-    Options: [
-        { Label: "Kamerę", Text: "Dopasuj kamerę do tego, na co będzie patrzeć", ImageUrl: "tx.jpg", GoTo: "kalibracja-kamery" },
-        { Label: "Słuchawkę", Text: "Ustaw bezpieczną głośność", ImageUrl: "ms.jpeg", GoTo: "kalibracja-sluchawki" },
-    ]
-},   
-{
-    Id: "kalibracja-kamery",
-    Type: "page",
-    Content: `### Regulacja ostrości
-
-Focus kamery jest regulowany za pomocą guzika-obiektywu. Kręcąc nim przesuwamy punkt w którym widać najostrzej. Należy to robić niezwykle ostrożnie pamiętając, że nie wolno całkowicie wykręcać guzika ani wkręcać go za mocno (to może skutkować połamaniem matrycy).  
-Regulacji należy dokonywać bardzo powoli, dosłownie po 1-2mm co chwilę zerkając na docelowy obiekt.
+    {
+        Id: "bezpieczenstwo",
+        Type: "page",
+        Content: `### Bezpieczeństwo
     
-*Guzik jest sklejony z obiektywem. Nie jest to jeden element i należy brać na to poprawkę. Choć klej jest bardzo wytrzymały to wszystko da się uszkodzić używając zbyt dużo siły. Zwłaszcza podczas montażu kamery w odzieży. Pamiętaj o tym!*
+    #### Detektory nadajników (wifi/bluetooth/etc)
     
+Przez detektor nadajników rozumiemy proste wskaźniki promieniowania radiowego. W najprostszej acz skuteczej wersji są to względnie tanie i proste w obsłudze urządzenia, które mają stosunkowo niewielki zasięg. Trzeba podejść z nimi dosyć blisko do źródła promieniowania (czyli do nas kiedy mamy na sobie kamerę lub inny sprzęt), na odległość mniejszą niż metr co z pewnością zdążymy zauważyć...
 
-### Regulacja oświetlenia
+Przed takimi detektorami względnie łatwo się ukryć. Wymaga to jednak odrobiny sprytu:
+- trzeba jak najszybciej dać znać pomocnikowi by zerwał połączenie telefoniczne,
+- wyłączyć kamerę rozłączając ją z powerbankiem,
+- wyłączyć bluetooth przytrzmując przycisk na kilka sekund,
 
-Kamera jest domyślnie przystosowana do pracy przy typowym "klasowym" oświetleniu, czyli świetlówkach o barwie około 4000K (światło białe, naturalne lub zimne).  
-W razie potrzeby światło można ustawić za pomocą aplikacji odbiorczej. W oknie podglądu znajduje się suwak regulacji jasności i kontrastu.
+Wszystkie te czynności da się wykonać przez ubranie bez wzbudzania podejrzeń. Warto przećwiczyć sobie taki scenariusz w domu.  
+Samo przywrócenie połączenia również nie powinno być trudne.
 
-![Regulacja jasności](camera/light.png)
+#### Wykrywacze metali
 
+Klasyczny ręczny wykrywacz ma niezbyt dużą czułość i trzeba go przyłożyć na prawdę blisko by zaczął reagować. Jeśli ktoś tylko nim przed nami pomacha to raczej nie ma szans żeby coś znalazł.  
+Dla pewności zawsze warto mieć na sobie coś metalowego: łańcuszek, zegarek, pasek z metalową klamrą itp. Szanse że każą nam się z tego rozbierać są raczej niewielkie.
 
-### Regulacja rozdzielczości
+Te znacznie trudniej oszukać aczkolwiek w naszej ofercie posiadamy sprzęt niewykrywalny przez takie detektory.  
+Szczegóły na stronie sklepu [https://specteam.pl](https://specteam.pl)
 
-Rozdzielczość regulujemy programowo za pomocą aplikacji odbiorczej. Nad okienkiem podglądu znajduje się wybierak pozwalający zmienić rozdzielczość na jedną z predefiniowanych lub dowolną własną.  
-Należy pamiętać, że im większa rozdzielczość zdjęcia tym dłużej będzie przesyłane.
+#### Aplikacje skanujące bluetooth
 
-![Regulacja rozdzielczości](camera/resolution.png)
+O ile prawdą jest, że takie aplikacje istnieją o tyle stwierdzenie za ich pomocą gdzie znajduje się konkretne urządzenie jest kompletną nieprawdą. Takie rozpoznanie wymaga co najmniej kilku anten i fachowej wiedzy. 
 
-Opcje z żaróweczką 💡 delikatnie rozjaśnia obraz i zwiększa kontrast.`
-},   
-{
-    Id: "kalibracja-sluchawki",
-    Type: "page",
-    Content: `### Regulacja głośności
-
-##### Na głośność w słuchawce wpływa wiele czynników:
-- ułożenie słuchawki w uchu: i nie chodzi tu tylko o głębokość ale również o kąt wokół własnej osi, który może mieć wpływ nawet na 80% głośności,
-- stan baterii w słuchawce: rozładowana bateria sprawia że słuchawka działa ciszej, ale biorąc pod uwagę długi czas pracy na baterii (ok 10 godzin) nie ma to większego znaczenia,
-- odległość od cewki pętli indukcyjnej: im bliżej tym głośniej, pętla nie powinna być dalej niż na wysokości szyji, jej realny zasięg wynosi max pół metra,
-- głośność w telefonie,
-- regulator na pętli o ile pętla takowy posiada
-
-##### Co nie ma wpływu na głośność:
-- stan naładowania pętli indukcyjnej: nie ma żadnego znaczenia,
-- stan naładowania telefonu: nie ma żadnego znaczenia
+Jeśli mimo to nie chcesz ryzykować zawsze możesz posłużyć się jednym z naszych niewykrywalnych urządzeń. [Szczegóły na stronie sklepu](https://specteam.pl)
 `
-},   
-{
-    Id: "ladowanie-kamery",
-    Type: "choose",
-    Title: `Który model posiadasz?`,
-    Options: [
-        { Label: "Standardowy zestaw", Text: "Klasyczny zestaw zasilany powerbankiem", ImageUrl: "connection.jpg", GoTo: "ladowanie-kamery-standard" },
-        { Label: "Kamera niewykrywalna", Text: "Kamera z własnym zasilaniem", ImageUrl: "usage.png", GoTo: "ladowanie-kamery-niewykrywalnej" },
-    ]
-},   
-{
-    Id: "ladowanie",
-    Type: "page",
-    Content: `### Ładowanie kamery
-
-Jeśli kamera nie posiada przycisku (zwykle jest to czerwony wciskany guziczek) to nie należy jej ładować ponieważ nie posiada własnego źródła zasilania. Taka kamera jest zasilana tylko z zewnątrz: za pomocą powerbanka lub innego źródła.
-
-### Ładowanie powerbanka
-
-Powerbanki które dostarczamy do zestawów są typowymi powerbankami bez żadnych dodatkowych czy wymyślnych funkcji. Co oznacza, że alternatywnie zawsze można użyć innego powerbanka.
-Czas ładowania *czarnego powerbanka o kształcie cylindra* wynosi około 8 godzin. Czas użytkowania z kamerą wynosi około 4 godzin.
-Podczas ładowania miga czerwona dioda. Po naładowaniu przestaje migać (świeci światłem ciągłym lub gaśnie zależnie od wersji).  
-
-### Ładowanie słuchawki
-
-Słuchaki się nie ładuje. Wystarczy wymienić w niej baterie (337 lub SR416SW). Przechowujemy wyłączoną!
-
-### Ładowanie pętli indukcyjnej
-
-Każda pętla ma gniazdo ładowania USB (zwykle mini-usb). Zależnie od modelu pętli czas ładowania wynosi około 3-5 godzin.
-Czas użytkowania od 6 do 11 godzin ciągłej rozmowy (lub kilka dni w trybie czuwania).
-
-### Ładowanie przenośnego routera
-
-Router ładujemy za pomocą kabla USB. Zielona dioda oznacza naładowanie. Czerwona - ładowanie. Czas pracy to około 8 godzin. Czas ładowania około 10 godzin.
-`,
-    NextId: "kontakt"
-},
-{
-    Id: "czyszczenie",
-    Type: "page",
-    Content: `### Czyszczenie i higiena
-
-Zasadniczo nie należy czyścić sprzętu samodzielnie. My się tym zajmiemy. Aczkolwiek, jeśli użytkowników słuchawki ma być wielu to warto zadbać o higienę.
-
-Najprostszym sposobem na wyczyszczenie słuchawki jest jej niezabrudzenie :) Pamiętaj o tym by czyścić ucho przed każdym jej użyciem! Zwykłymi wacikami, zawsze do sucha. W razie czego słuchawkę można przetrzeć suchym papierem toaletowym lub chusteczką. Nie należy stosować żadnej chemii! 
-`,
-    NextId: "kontakt"
-},
-]
-
-export const hiding = [
-    {
-        Id: "ukrywanie",
-        Type: "choose",
-        Title: `Co chcesz ukryć?`,
-        Options: [
-            { Label: "Kamerę", ImageUrl: "tx.jpg", GoTo: "ukrywanie-kamery" },
-            { Label: "Słuchawkę", ImageUrl: "ms.jpeg", GoTo: "ukrywanie-sluchawki" },
-            { Label: "Telefon", ImageUrl: "phone.jpg", GoTo: "ukrywanie-telefonu" },
-            
-        ]
     },
     {
-        Id: "ukrywanie-kamery",
+        Id: "przechowywanie",
         Type: "page",
-        Content: `### Ukrywanie kamery
-        
-Najlepszym miejscem na ukrycie kamery jest zwykła koszula.
+        Content: `### Przechowywanie
+    
+Sprzęt należy przechowywać zawsze wyłączony. Dotyczy to szczególnie mikrosłuchawki bateryjnej, która reaguje na zmiany pola elektormagnetycznego w swoim otoczeniu i zużywa baterię.
 
-Są dwie szkoły montowania obiektywu:
-- w mankiecie - pod zegarkiem lub zamiast jednego guzika,
-- lub na wysokości mostka - to miejsce zapewnia dobre ujęcia kartki i łatwą sterowność.
+Odkładając sprzęt na dłużej warto go naładować i doładowywać co najmniej raz na pół roku.
 
-Montując guzik należy pamiętać o tym, że jest to element stosunkowo delikatny:
-- soczewka obiektywu jest klejona z guzikiem - nie wolno jej narażać na przeciążenia, bo może się złamać,
-- sam guzik się obraca - co ma wpływ na "ostrość widzenia" kamery
+Ważne też zadbać o czystość elementów, szczególnie słuchawki, która miała styczność ze skórą.
 
-Podczas montażu zwróć uwagę na to, by guzik swobodnie przeszedł przez wybrany otwór. Jeśli ten jest za mały, powiększ go rozcinając materiał.
+Wszelkie kable powinny zostać rozłączone.
 
-Samą kamerę należy przykleić do ubrania. Nie do ciała!
-Power bank najlepiej schować za paskiem, tak żeby był do niego swobodny dostęp.
+Pętli indukcyjnej nie należy zbyt mocno skręcać. Powinna leżeć w miarę luźno, złożona maksymalnie 4 razy na kształ ósemki.
 
-Po przymocowaniu sprzętu upewnij się, że nigdzie nie prześwitują diody i że nic nie odstaje podczas ruchu.
-Potrenuj nawigowanie sprzętem wraz ze swoim Pomocnikiem przez co najmniej 30 minut.`,
-        NextId: "kontakt"
+Nowe baterie do słuchawki mogą być przechowywane przez kilka lat. W miarę degradacji pokryją się białym nalotem - należy je wtedy wymienić na nowe.  
+Żywotność ogniw (akumulatorów) w innych urządzeniach wynosi kilka lat. Nasze najstarsze urządzenia mają po 8 i więcej lat i nadal zachowują wystarczający czas pracy (za minimum przyjmujemy 4 godzin ciągłego działania).
+`
     },
     {
-        Id: "ukrywanie-sluchawki",
+        Id: "komunikacja",
         Type: "page",
-        Content: `### Ukrywanie słuchawki
-        
-Słuchawkę należy włożyć do ucha cielistą stroną najgłębiej jak to możliwe.
+        Content: `### Komunikacja
+    
+Sprawna komunikacja z pomocnikiem jest kluczem do sukcesu. Dobry "Operator" ma niełatwe zadanie: musi zadbać o łączność jak i o "poprawne odpowiedzi". To duże obciążenie dla jednej osoby dlatego warto zawsze rozważyć co najmniej dwóch pomocników.
 
-Wystarczy docisnąć ją palcem.
-Nie obawiaj się uszkodzenia ucha - słuchawka jest w 100% bezpieczna i nie ma fizycznej możliwości żeby dotknęła błony bębenkowej.
+W sprawnej komunikacji pomaga przede wszystkim trening - im więcej tym lepiej. Podczas prób wychodzą drobne niuanse, takie jak na przykład co robić w czasie kiedy połączenie zostanie z jakiegoś powodu zerwane lub zwyczajnie czegoś nie dosłyszymy, bo na przykład ktoś dyktuje za szybko.
 
-Słuchawkę wyciągniesz za przezroczystą żyłkę, która znajduje się na wieczku baterii. Zwykle nie ma potrzeby używania pencety. Da się ją wyjąć palcami lub paznokciem przeciągając przy skórze. W razie problemów można też poruszać szczęką na lewo i prawo - sprawi to że słuchawka zacznie się wysuwać (co jednocześnie oznacza że lepiej nie rozmawiać i nie żuć gumy podczas używania słuchawki)`,
-        NextId: "kontakt"
+Niewątpliwie warto wykorzystać fakt, że w zestawie jest mikrofon i na przykład umówić się na jakieś sygnały. Będzie to zdecydowanie szybsze niż pisanie czegoś na kartce i pokazywanie tego kamerą.
+
+Dobrą praktyką jest też pytanie przez pomocnika osoby na sali *czy wszystko zrozumiała*, a w przypadku braku potwierdzenia zapytanie *czy czegoś nie zrozumiała*.
+
+Najtrudniejszą rzeczą jest samo nawigowanie kamerą, kiedy słyszymy tylko komunikaty lewo/prawo. Takie informacje nie są zbyt precyzyjne i lepiej jest mówić coś w stylu: "przesuń kartkę 5cm w prawo" niż "przesuń w lewo".
+
+Sprawnie przerprowadzona akcja charakteryzuje się tym, że samo przesłanie zdjęć zajmuje góra kilka minut. Potem Operator pracuje tylko na zapisanych zdjęciach. Dzięki tmeu można zaoszczędzić sporo czasu na ponowne celowanie w papier.
+`
     },
     {
-        Id: "ukrywanie-telefonu",
+        Id: "wlaczanie",
         Type: "page",
-        Content: `### Ukrywanie telefonu
-        
-Dzisiejszy, typowy smartfon nie łatwo ukryć, dlatego zachęcamy do korzystania z naszych subminiaturowych telefonów, które posiadają wszelkie niezbędne funkcje do obsługi naszych zestawów (bluetooth, hotspot, internet itd). Poza tym są przystosowane do bezpiecznej pracy - nie posiadają głośników ani układów wibracyjnych - nie wydają więc żadnych dźwięków.
+        Content: `### Włączanie i wyłączanie
+    
+#### Włączenie kamery
 
-Ukrywając własny telefon warto zwrócić uwagę na następujące kwestie:
-- telefon powinien być we względnie niedużej odległości od zestawu (max kilka metrów),
-- powinien być wyciszony,
-- powinien być skierowany wyświetlaczem w stronę ciała, tak żeby jego anteny były skierowane na zewnątrz,
-- nie powinien stykać się bezpośrednio ze skórą (żeby coś się przypadkiem samo nie nacisnęło)
+O ile kamera nie posiada przycisku wystarczy podłączyć ją do powerbanka i odczekać około 45 sekund. Stan włączenia zostanie zasygnalizowany przez diodę znajdującą się przy porcie zasilania.
 
-Co do miejsca - nie ma to większego znaczenia. Brzuch, uda, łydki - wszystkie te miejsca będą dobre. Warto uzbroić się w taśmę elastyczną albo bandaż do zamocowania telefonu.
-`,
-        NextId: "kontakt"
+#### Wyłączenie kamery
+
+O ile kamera nie posiada przycisku wystarczy odłączyć ją od powerbanka. Jeśli przycisk posiada - należy nacisnąć go dwa razy.
+
+#### Włączenie pętli indukcyjnej
+
+W zależności od modelu wystarczy przytrzymać przycisk przez 3 sekundy lub przełączyć suwak włącznika w pozycję "ON".
+
+#### Wyłączenie pętli indukcyjnej
+
+Przytrzymaj przycisk przez 3 sekundy lub przełącz suwak włącznika w pozycję "OFF".
+
+#### Włączenie słuchawki
+
+Włóż baterię do słuchawki.
+
+#### Wyłączenie słuchawki
+
+Wyjmij baterię ze słuchawki.`
     },
-]
+    {
+        Id: "strona-odbiorcza",
+        Type: "page",
+        Content: `### Aplikacja odbiorcza
+    
+Aplikacja jest de facto zwykłą stroną internetową, którą można otworzyć w przeglądarce. Nie wymaga instalowania ani specjalnych uprawnień.  
+
+Wystarczy znać hasło by z niej korzystać. Hasło zwykle dostarczamy SMSem na numer użytkownika lub z kartą dołączoną do zestawu.  
+
+Hasła są nadawane odgórnie i działają przez cały okres użytkowania sprzętu. Każdy nowy użytkownik zawsze otrzymuje nowe hasło.
+
+![Aplikacja odbiorcza](camera/app.png)
+
+#### Podgląd na żywo
+
+Aby uruchomić podgląd na żywo należy kliknąć guzik \`Przywróć podgląd\`. Parametry transisji można zmienić wybierakiem w prawym górnym rogu: do dyspozycji jest kilka opcji rozdzielczości jak również możliwość dowolnej regulacji parametrów transmisji po wybraniu \`Ustawienia własne\`.
+
+#### Stopklatki 
+
+Zasadniczym zadaniem aplikacji jest udostępnienie podglądu na żywo z kamery jak również możliwość zapisania wybranych ujęć. Do tego celu służy guzik \`Stopklatka\` tuż pod okienkiem podglądu.
+
+Podglądu zapisanych zdjęć można dokonać klikając na ich miniaturkę. Spowoduje to załadowanie zdjęcia do widoku podglądu na żywo. Aby przywrócić podgląd na żywo należy kliknąć guzik \`Przywróć podgląd\`.
+
+#### Zapis stopklatek
+
+Przeglądarka jest w stanie zachować w sposób persystentny tylko 5MB danych. Oznacza to że ilość zdjęć jaką jesteśmy w stanie zapisać jest ograniczona.  
+Pamięć aplikacji nie jest ograniczona i jest w stanie pomieścić tysiące zdjęć tak długo jak nie przeładujemy strony.
+
+#### Współdzielenie stopklatek
+
+Zapisane zdjęcia można wysłać na nasz serwer, gdzie będą przechowywane przez kilka dni. Użyj w tym celu ikonki chmurki przy każdej miniaturce.  
+Kliknij guzik \`Zapisz...\` aby dowiedzieć się jak uzyskać dostęp do zapisanych w ten sposób zdjęć.  
+
+Co ważne - współdzieląc link do zapisanych zdjęć nie przekazujesz bezpośredniego dostępu do podglądu na żywo.
+
+#### Status
+
+Na samym dole strony znajduje się pasek statusu, który informuje o stanie połączenia i transmisji.
+`
+    },
+];
