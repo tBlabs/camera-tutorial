@@ -6,7 +6,7 @@ import { msProblems, msSlides } from './Slides/ms';
 import { cameraProblems } from "./Slides/problems";
 import { leds } from "./Slides/leds";
 import { android } from "./Slides/android";
-import { magnetic } from "./magnetic";
+import { magnetic } from "./Slides/magnetic";
 import { prepare } from "./Slides/prepare";
 import { contact } from "./Slides/contact";
 import { start } from "./Slides/start";
