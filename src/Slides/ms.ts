@@ -27,7 +27,7 @@ Powodów braku dźwięku w słuchawce może być kilka. Szukając usterki upewni
 - *Głośność jest ustawiona na maksymalną* - Podczas prób warto zacząć od maksymalnej głośności, którą ustawia się w telefonie a czasem na pętli
 
 Jeśli powyższe sprawdzenia nie przyniosły efektu:
-- Przyłóż pętle bliżej ucha i włącz ją - powinien być słyszalny pisk. Jeśli go nie ma to najprawdopodobniej cewka pętli została uszkodzona i należy ją wymienić,
+- Przyłóż pętle bliżej ucha i włącz ją - powinien być słyszalny pisk. Jeśli go nie ma to najprawdopodobniej cewka pętli została uszkodzona i należy ją wymienić.
 `,
         NextId: "kontakt"
     },
@@ -50,8 +50,8 @@ Zbyt niska głośność może być oznaką:
         Content: `### Zbyt głośno
         
 Wysoka głośność może być oznaką:
-- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być na szyi
-- *Ustawiona jest zbyt wysoka głośność* - Ustaw w telefonie mniejszą głośność rozmowy
+- *Zbyt małej odległości pętli od słuchawki* - Pętla powinna być na szyi, nie przy samym uchu
+- *Ustawiona jest zbyt wysoka głośność* - Ustaw w telefonie mniejszą głośność rozmowy. Zdarza się, że telefon "zawiesi się" podczas regulacji głośności (i nie ma to związku z samym zestawem). Reset (wyłączenie i ponowne włączenie) całego telefonu może pomóc.
 `,
         NextId: "kontakt"
     },
@@ -62,7 +62,8 @@ Wysoka głośność może być oznaką:
         
 Zakłócenia w słuchawce w postaci buczenia bądź pisku mogą być oznaką przebywania w otoczeniu czegoś co te zakłócenia emituje (świetlówka, silnik elektryczny, silnik samochodu, silne pole magnetyczne itp). W takim wypadku warto zmienić otoczenie. Jeśli mimo to problemy nadal występują należy upewnić się, że:
 - *Klapka baterii jest dobrze dokręcona* - Słabe dociśnięcie baterii może powodować trzaski
-- *Bateria w słuchawce nie jest stara* - Słaba bateria może czasem objawiać się delikatnym piskiem`,
+- *Bateria w słuchawce nie jest stara* - Słaba bateria może czasem objawiać się delikatnym piskiem
+- *Słuchawka jest sucha* - Nawet odrobina wody wewnątrz słuchawki może powodować zwarcie`,
         NextId: "kontakt"
     },
     {
@@ -71,7 +72,7 @@ Zakłócenia w słuchawce w postaci buczenia bądź pisku mogą być oznaką prz
         Content: `### Brak połączenia
         
 Może być spowodowany:
-- *Nieudanym parowaniem pętli z telefonem* - Wykonaj procedure ponownie i upewnij się, że telefon "widzi" pętle
+- *Nieudanym parowaniem pętli z telefonem* - [Wykonaj procedure parowania](#slide/ms-loop) ponownie i upewnij się, że telefon "widzi" pętle
 - *Nie wybraniem bluetooth na czas rozmowy* - Dzwoniąc upewnij się, że rozmowa jest przekierowana na bluetooth
 - *Bycie poza zasięgiem bluetooth* - Efektywny zasięg bluetooth to kilka metrów. Nie odchodź za daleko od pętli`,
         NextId: "kontakt"
