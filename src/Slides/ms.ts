@@ -115,7 +115,7 @@ Zapchanej słuchawki nie da się samodzielnie wyczyścić, więc należy bezwzgl
         Type: "page",
         Content: `Włóż baterie. Płaską częścią do góry. Kółeczkiem w strone sprężynki.  
 
-Zakręć i włóż słuchawkę do *czystego ucha*. Powinien być słyszalny szum. Póki co nie dociskaj słuchawki. Postaraj się znaleźć punkt w którym szum jest najgłośniejszy poprzez obracanie słuchawki i dopiero wtedy dociśnij ją w głąb kanału.
+Zakręć i włóż słuchawkę do *czystego ucha* zwężeniem do środka (przezroczysta żyłka powinna być skierowana na zewnątrz). Powinien być słyszalny szum. Póki co nie dociskaj słuchawki. Postaraj się znaleźć punkt, w którym szum jest najgłośniejszy poprzez obracanie słuchawki i dopiero wtedy dociśnij ją w głąb kanału.
 `,
         ImageUrl: "ms/bat.jpeg",
         NextId: "ms-loop"

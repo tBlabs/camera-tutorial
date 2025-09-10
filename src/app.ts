@@ -1,4 +1,4 @@
-import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Span, Link, Div } from "@tblabs/truffle";
+import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Div } from "@tblabs/truffle";
 import { Router } from './Services/Router';
 import { SlideFactory } from './Services/SlideFactory';
 import { iPhoneSlides } from './Slides/iPhone';
@@ -17,6 +17,7 @@ import { usage } from "./Slides/usage";
 import { hiding } from "./Slides/hiding";
 import { calibration } from "./Slides/calibration";
 import { charging } from "./Slides/charging";
+import { ISlideBase } from "./Core/ISlideBase";
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -26,7 +27,7 @@ ModalWindow.DefaultCssClasses = "tf-modal-window";
 ModalWindow.Hook = Root.Hook;
 
 
-const slides = [
+const slides: ISlideBase[] = [
     ...start,
     ...prepare,
     ...msSlides,
@@ -59,11 +60,14 @@ try
             {
                 const slide = slides.find(x => x.Id == id);
 
+                if (!slide)
+                {
+                    return new Div().Text("Nie znaleziono slajdu").Margin(32).TextAlignCenter()
+                }
+
                 window.scrollTo(0, 0);
 
-                return slide
-                    ? _sf.Create(slide)
-                    : new Div().Text("Nie znaleziono slajdu").Margin(32).TextAlignCenter()
+                return _sf.Create(slide);
             })
             .AddDefaultContent(() =>
             {

@@ -6,9 +6,35 @@ export const hiding = [
         Title: `Co chcesz ukryć?`,
         Options: [
             { Label: "Kamerę", ImageUrl: "tx.jpg", GoTo: "ukrywanie-kamery" },
+            { Label: "Wifi", ImageUrl: "wifi.jpg", GoTo: "ukrywanie-wifi" },
             { Label: "Słuchawkę", ImageUrl: "ms.jpeg", GoTo: "ukrywanie-sluchawki" },
             { Label: "Telefon", ImageUrl: "phone.jpg", GoTo: "ukrywanie-telefonu" },
         ]
+    },
+    {
+        Id: "ukrywanie-wifi",
+        Type: "page",
+        Content: `### Ukrywanie wifi
+        
+Jeśli nie chcesz aby Twoje wifi było widoczne w eterze, możesz je ukryć:
+1. W ustawieniach routera wybierz opcje \`Ukrywanie SSID\` lub podobną, o ile taka istnieje.  
+
+2. Wybierz jedną z poniższych nazw sieci i hasła:
+
+NAZWA SIECI            | HASŁO
+---------------------- | ----------------------
+Orange Free Wifi 5G    | superstrongpassword
+Sala wykladowa C14-F   | superstrongpassword
+VP3C4F44Y-MP9          | superstrongpassword
+
+Szanse, że ktoś się domyśli, że to Twoja prywatna sieć są praktycznie zerowe.
+
+3. Kamerę można połączyć z lokalną siecią w budynku o ile ta nie wymaga uwierzytelniania np. numerem indeksu albo innymi danymi.
+
+Ta metoda wymaga naszej ingerencji i można to zrobić z naszym serwisem zdalnie.
+    `,
+        ImageUrl: "",
+        NextId: "kontakt"
     },
     {
         Id: "ukrywanie-kamery",
