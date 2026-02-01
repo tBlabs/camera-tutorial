@@ -18,6 +18,8 @@ import { hiding } from "./Slides/hiding";
 import { calibration } from "./Slides/calibration";
 import { charging } from "./Slides/charging";
 import { ISlideBase } from "./Core/ISlideBase";
+import { txl } from "./Slides/txl";
+
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
 TextInput.DefaultCssClasses = "uk-input";
@@ -29,6 +31,7 @@ ModalWindow.Hook = Root.Hook;
 
 const slides: ISlideBase[] = [
     ...start,
+    ...txl,
     ...prepare,
     ...msSlides,
     ...msProblems,

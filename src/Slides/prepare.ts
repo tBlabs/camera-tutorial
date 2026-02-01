@@ -1,5 +1,5 @@
 export const prepare = [{
-    Id: "phone:prepare",
+    Id: "jak-przygotowac-telefon",
     Type: "page",
     Content: `### Jak wyciszyć telefon
     
@@ -23,7 +23,7 @@ Upewnij się, że Twój telefon "podoła" zadaniu i wytrzyma co najmniej tyle cz
 Przy okazji w ten sposób wykonasz również próbę ogniw w zestawie. Zanim wejdziesz na salę musisz mieć pewność, że baterie (powerbank i pętla) są naładowane i wytrzymają tyle ile potrzebujesz.`,
 },
 {
-    Id: "package:prepare",
+    Id: "jak-odeslac-paczke",
     Type: "page",
     Content: `### Jak odesłać sprzęt
     

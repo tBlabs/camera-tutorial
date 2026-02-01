@@ -50,6 +50,7 @@ Są dwie szkoły montowania obiektywu:
 Montując guzik należy pamiętać o tym, że jest to element stosunkowo delikatny:
 - soczewka obiektywu jest klejona z guzikiem - nie wolno jej narażać na przeciążenia, bo może się złamać,
 - sam guzik się obraca - co ma wpływ na "ostrość widzenia" kamery
+- jeśli za guzikiem jest biała kropka to znak, że w tej kamerze nie da się regulować ostrości - nie próbuj tego robić!
 
 Podczas montażu zwróć uwagę na to, by guzik swobodnie przeszedł przez wybrany otwór. Jeśli ten jest za mały, powiększ go rozcinając materiał.
 

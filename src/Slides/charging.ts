@@ -23,7 +23,13 @@ Podczas ładowania miga czerwona dioda. Po naładowaniu przestaje migać (świec
 
 ### Ładowanie słuchawki
 
-Słuchaki się nie ładuje. Wystarczy wymienić w niej baterie (337 lub SR416SW). Przechowujemy wyłączoną!
+Słuchaki się nie ładuje. Wystarczy wymienić w niej baterie (337 lub SR416SW).   
+Słuchawkę należy przechowywać wyłączoną.    
+Przed każdą "akcją" załóż nową baterię! W każdym zestawie powinny znajdować się co najmniej 2 nowe, zapakowane w blister.  
+Średni czas pracy samej słuchawki to około 10 godzin. Pętle indukcyjne pracują około 6-10 godzin.   
+Bateria dostarczona wraz ze słuchawką służy tylko do testów i nie jest w pełni naładowana.  
+
+Wkładając baterię zadbaj o to, aby nie zrobić na niej niechcący zwarcia (np. wkładając ją odwrotnie).
 
 ### Ładowanie pętli indukcyjnej
 
