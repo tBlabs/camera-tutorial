@@ -11,10 +11,33 @@ export const phone = [{
 {
     Id: "camera-start",
     Type: "page",
-    Content: `Hotspot jest już gotowy. Te ustawienia wprowadza się tylko raz.\n\nOd tej pory wystarczy włączyć hotspot przed uruchomieniem kamery (guzikiem \`Dopuszczaj innych\` i poczekać aż kamera się połączy z hotspotem, dopiero wtedy można wyjść z ekranu hotspota).
+    Content: `Hotspot jest już gotowy. Te ustawienia wprowadza się tylko raz i nie ma potrzeby ich zmieniać jeśli ta kamera będzie jedyną na sali.
     
+Od tej pory wystarczy włączyć hotspot przed uruchomieniem kamery (guzikiem \`Dopuszczaj innych\` i poczekać aż kamera połączy się z hotspotem, dopiero wtedy można wyjść z ekranu hotspota).
     
-Docelowo ustaw hotspot na ten który otrzymasz w SMS od nas wraz z hasłem do serwisu - dzięki temu będziesz mieć pewność, że Twoja kamera łączy się tylko z Twoim telefonem.
+Docelowo ustaw hotspot na ten, który otrzymasz w SMS od nas wraz z hasłem do serwisu.  
+Przykładowa wiadomość wygląda następująco:
+\`\`\`
+🎓 Instrukcja obsługi: 
+https://tutorial.specteam.pl
+
+📱 Szybki podgląd: 
+https://watcher.specteam.pl#watch/H1/myszowy_pomidorek_123
+
+💻 Podgląd na komputerze: 
+https://watcher.specteam.pl#login/H1 
+hasło: "myszowy pomidorek 123"
+
+🛜 Opcjonalnie w telefonie ustaw hotspot z nazwą "TX1234" i hasłem "TX1234password"
+\`\`\`
+Chodzi o ostatnią linijkę z SMSa, czyli: 
+- zamień *hotspot1* na nazwę z SMS, czyli jak w przykładzie *TX1234*  
+- zamień *hotspot1password* na *TX1234password*  
+
+Po zmianie tych ustawień warto wyłączyć i włączyć hotspot ponownie.
+
+Dzięki temu będziesz mieć pewność, że Twoja kamera łączy się tylko z Twoim telefonem.
+
 
 W kolejnym kroku włączymy kamere...
     `,

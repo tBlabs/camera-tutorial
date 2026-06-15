@@ -5,11 +5,9 @@ export const contact = [ {
 
 Jeśli nie udało Ci się samodzielnie poradzić sobie z problemem skorzystaj z opcji poniżej:
 
-📜 Pełna instrukcja obsługi: [watcher.specteam.pl/#help](https://watcher.specteam.pl/#help)
-    
 ☎️ Infolinia: *507-293-714*  
 
-🌐 Strona kontaktu: [www.specteam.pl/Kontakt](https://specteam.pl/Kontakt)
+🌐 Strona kontaktu: [www.specteam.pl](https://www.specteam.pl/#kontakt)
 
 `,
     NextId: "inne-sprawy"
