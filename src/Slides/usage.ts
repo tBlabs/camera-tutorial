@@ -25,6 +25,12 @@ Dla pewności zawsze warto mieć na sobie coś metalowego: łańcuszek, zegarek,
 Wykrywacz metali znacznie trudniej oszukać aczkolwiek w naszej ofercie posiadamy sprzęt niemal niewykrywalny przez takie detektory.  
 Szczegóły na stronie sklepu [https://specteam.pl](https://specteam.pl)
 
+#### Detektory optyczne
+
+Na rynku istnieją detektory, które pozwalają wykrywać obiektywy kamer z użyciem światła czerwonego. Takie sprawdzenie jest dość inwazyjne ponieważ wymaga bezpośredniego świecenia na obiektyw z kilku metrów. Nie da się tego nie zauważyć.  
+
+**Jak się bronić?** Wystarczy zakleić obiektyw w guziku na czas sprawdzenia.
+
 #### Aplikacje skanujące bluetooth
 
 O ile prawdą jest, że takie aplikacje istnieją o tyle stwierdzenie za ich pomocą gdzie konkretne znajduje się urządzenie jest kompletną nieprawdą. Takie rozpoznanie wymaga co najmniej kilku anten i fachowej wiedzy. 
