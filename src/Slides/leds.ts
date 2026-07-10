@@ -82,6 +82,7 @@ Zaloguj się i sprawdź czy wszystko jest w porządku. Jeśli nie - wybierz któ
             { Label: "Powolna transmisja", Icon: "🐢", GoTo: "kamera:powolna-transmisja" },
             { Label: "Za mała rozdzielczość", Icon: "📺", GoTo: "kamera:mala-rozdzielczosc" },
             { Label: "Brak obrazu podczas rozmowy", Icon: "☎️", GoTo: "kamera:podczas-rozmowy" },
+            { Label: "Niestabilne połączenie", Icon: "🔗", GoTo: "kamera:niestabilne-polaczenie" },
             { Label: "Inny problem", Icon: "🧱", GoTo: "led" },
         ]
     },

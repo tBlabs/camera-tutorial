@@ -99,6 +99,19 @@ h3 {
     color: #444;
 }
 
+.card-caption h3 {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 4px;
+    margin-top: 0;
+}
+
+.card-caption p {
+    font-size: 1rem;
+    padding: 12px 4px;
+    margin: 0;
+}
+
 .btn-color {
     color: #444 !important;
 }
@@ -156,6 +169,7 @@ table th:last-child {
 
     .middle {
         padding: 0;
+        padding-top: 8px;
     }
 
     .markdown {
