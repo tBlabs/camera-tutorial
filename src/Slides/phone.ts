@@ -38,6 +38,12 @@ Po zmianie tych ustawień warto wyłączyć i włączyć hotspot ponownie.
 
 Dzięki temu będziesz mieć pewność, że Twoja kamera łączy się tylko z Twoim telefonem.
 
+### Co ma zrobić odbiorca?
+
+Nic. Wystarczy, że otworzy link z SMS.  
+Nie musi odpalać hotspota, bluetooth ani niczego innego.
+
+---
 
 W kolejnym kroku włączymy kamere...
     `,

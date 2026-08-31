@@ -25,6 +25,6 @@ Pozostałe opcje raczej nie mają znaczenia, ale jeśli gdzieś w menu zauważys
 Szyfrowanie należy ustawić na *WPA2 PSK*. Warto też **wyłączyć** takie opcje jak *automatyczny hotspot* czy *automatyczne wyłączanie* lub *oszczędzanie danych*.
 `,
         ImageUrl: "android/android-2.jpg",
-        NextId: "led"
+        NextId: "camera-start"
     },
 ]

@@ -1,24 +1,9 @@
 import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Div } from "@tblabs/truffle";
 import { Router } from './Services/Router';
 import { SlideFactory } from './Services/SlideFactory';
-import { iPhoneSlides } from './Slides/iPhone';
-import { msProblems, msSlides } from './Slides/ms';
-import { cameraProblems } from "./Slides/problems";
-import { leds } from "./Slides/leds";
-import { android } from "./Slides/android";
-import { magnetic } from "./Slides/magnetic";
-import { prepare } from "./Slides/prepare";
-import { contact } from "./Slides/contact";
 import { start } from "./Slides/start";
-import { phone } from "./Slides/phone";
-import { detector } from "./Slides/detector";
-import { cleaning } from "./Slides/cleaning";
-import { usage } from "./Slides/usage";
-import { hiding } from "./Slides/hiding";
-import { calibration } from "./Slides/calibration";
-import { charging } from "./Slides/charging";
-import { ISlideBase } from "./Core/ISlideBase";
-import { txl } from "./Slides/txl";
+import { MapPage } from "./Pages/MapPage";
+import { SLIDES } from "./slides";
 
 
 NumberInput.DefaultCssClasses = "uk-input uk-form-width-small";
@@ -29,28 +14,7 @@ ModalWindow.DefaultCssClasses = "tf-modal-window";
 ModalWindow.Hook = Root.Hook;
 
 
-const slides: ISlideBase[] = [
-    ...start,
-    ...txl,
-    ...prepare,
-    ...msSlides,
-    ...msProblems,
-    ...phone,
-    ...magnetic,
-    ...iPhoneSlides,
-    ...android,
-    ...leds,
-    ...cameraProblems,
-    ...contact,
-    ...hiding,
-    ...detector,
-    ...calibration,
-    ...charging,
-    ...cleaning,
-    ...usage,
-]
-
-const root = new Root("body").Class("root")
+const root = new Root("body").Class("root");
 
 try
 {
@@ -59,9 +23,10 @@ try
 
     root.Append(
         new DestroyingPatternContentSwitcher(_router.Hash).Class("PagesSwitcher")
+            .AddContent("map", () => new MapPage())
             .AddContent("slide/:id", ({ id }) =>
             {
-                const slide = slides.find(x => x.Id == id);
+                const slide = SLIDES.find(x => x.Id == id);
 
                 if (!slide)
                 {
