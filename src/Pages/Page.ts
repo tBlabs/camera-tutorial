@@ -1,20 +1,8 @@
-import { Div, Span } from "@tblabs/truffle";
+import { Div } from "@tblabs/truffle";
 import { Router } from "../Services/Router";
 import { ISlide } from "../Core/ISlide";
+import { TopButton } from "./TopButton";
 
-
-export class TopButton extends Span
-{
-    constructor(icon: string, onClick: () => void, enabled: () => boolean = () => true)
-    {
-        super();
-
-        this.Text(icon).Class("uk-icon-button btn-color")
-            .CursorPointer()
-
-        this.OnClick(() => enabled() && onClick())
-    }
-}
 
 export class Page extends Div
 {
@@ -35,9 +23,10 @@ export class Page extends Div
         this.slide = slide;
         return this;
     }
+
     constructor(private _router: Router)
     {
-        super("SlidePage uk-background-default");
+        super("page");
 
         this.Append(
             this.top,

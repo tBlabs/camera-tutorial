@@ -60,19 +60,44 @@ Nowe baterie do słuchawki mogą być przechowywane przez kilka lat. W miarę de
         Type: "page",
         Content: `### Komunikacja
     
-Sprawna komunikacja z pomocnikiem jest kluczem do sukcesu. Dobry "Operator" ma niełatwe zadanie: musi zadbać o łączność jak i o "poprawne odpowiedzi". To duże obciążenie dla jednej osoby dlatego warto zawsze rozważyć co najmniej dwóch pomocników.
+Sprawna komunikacja z pomocnikiem jest kluczem do sukcesu. Dobry "Operator" ma niełatwe zadanie: musi zadbać o łączność jak i o "poprawne odpowiedzi". To duże obciążenie dla jednej osoby, dlatego warto zawsze rozważyć co najmniej kilku pomocników.
 
-W sprawnej komunikacji pomaga przede wszystkim trening - im więcej tym lepiej. Podczas prób wychodzą drobne niuanse, takie jak na przykład co robić w czasie kiedy połączenie zostanie z jakiegoś powodu zerwane lub zwyczajnie czegoś nie dosłyszymy, bo na przykład ktoś dyktuje za szybko.
+W sprawnej komunikacji pomaga przede wszystkim trening - im więcej tym lepiej. Podczas prób wychodzą drobne niuanse, takie jak na przykład co robić w czasie kiedy połączenie zostanie z jakiegoś powodu zerwane lub zwyczajnie czegoś nie dosłyszymy, bo na przykład ktoś dyktuje za szybko, sieć na chwilę się przytnie lub przeszkodzi nam jakiś hałas.
 
-Niewątpliwie warto wykorzystać fakt, że w zestawie jest mikrofon i na przykład umówić się na jakieś sygnały. Będzie to zdecydowanie szybsze niż pisanie czegoś na kartce i pokazywanie tego kamerą.
+Warto wykorzystać fakt, że w zestawie jest mikrofon i dzięki temu można umówić się na jakieś dyskretne sygnały typu chrząknięcie, kaszlnięcie, podrapanie się po mikrofonie lub pstryknięcie długopisem. Będzie to zdecydowanie szybsze niż pisanie na kartce i pokazywanie tego kamerą.
 
-Dobrą praktyką jest też pytanie przez pomocnika osoby na sali *czy wszystko zrozumiała*, a w przypadku braku potwierdzenia zapytanie *czy czegoś nie zrozumiała*.
+Dobrą praktyką jest też każdorazowe zadawanie pytania przez Operatora "Czy komenda była zrozumiała*, a w przypadku braku potwierdzenia zapytanie *Czy coś zostało niezrozumiane*.
 
 Najtrudniejszą rzeczą jest samo nawigowanie kamerą, kiedy słyszymy tylko komunikaty lewo/prawo. Takie informacje nie są zbyt precyzyjne i lepiej jest mówić coś w stylu: "przesuń kartkę 5cm w prawo" niż "przesuń w lewo".
 
 Sprawnie przerprowadzona akcja charakteryzuje się tym, że samo przesłanie zdjęć zajmuje góra kilka minut. Potem Operator pracuje tylko na zapisanych zdjęciach. Dzięki tmeu można zaoszczędzić sporo czasu na ponowne celowanie w papier.
-`
+`,
+    // NextId: "protokol-komunikacji",
     },
+//     {
+//         Id: "protokol-komunikacji",
+//         Type: "page",
+//         Content: `### Protokół komunikacji
+    
+// Ta instrukcja dotyczy głównie tego jak powinien komunikować się Operator (pomagający) z Klietem (osobą na sali).  
+// Ważne są następujące aspekty:
+
+// ### Przygotuj otoczenie
+// - Zadbaj o oświetlenie podobne do tego, które będzie na sali (raczej sztuczne, świetlówki 4000kK, unikaj światła słonecznego)
+// - Znajdź stół podobny do tego, który będzie na sali
+// - Ubierz się tak jak będziesz docelowo ubrany (testuj sprzęt który jest już wpięty w ubranie)
+// - Używaj dokładnie tego telefonu, który planujesz zabrać
+// - Twoi pomocnicy powinni pracować na dokładnie tym sprzęcie na którym zamierzają docelowo pracować
+
+// ### Komendy do sterowania kamerą
+// - Komendy należy powtarzać co najmniej 2 razy
+// - Lepiej mówić "kartka 5 cm w prawo" niż samo "w prawo"
+// - Lepiej odnosić się do przesunięcia kartki niż ciała (Klient nie ma pojęcia gdzie patrzy kamera)
+
+// ### Sposób przekazywania odpowiedzi
+// - Klient nie ma możliwości mówienia, co najwyżej może wydawać odgłosy
+// `
+//     },
     {
         Id: "wlaczanie",
         Type: "page",

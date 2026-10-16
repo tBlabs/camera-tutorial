@@ -1,3 +1,5 @@
+import "./Css/app.css";
+
 import { NumberInput, TextInput, Button, Select, ModalWindow, Root, DestroyingPatternContentSwitcher, Div } from "@tblabs/truffle";
 import { Router } from './Services/Router';
 import { SlideFactory } from './Services/SlideFactory';
@@ -30,7 +32,7 @@ try
 
                 if (!slide)
                 {
-                    return new Div().Text("Nie znaleziono slajdu").Margin(32).TextAlignCenter()
+                    return new Div().Text("Nie znaleziono slajdu").Margin(32).TextAlignCenter();
                 }
 
                 window.scrollTo(0, 0);
@@ -45,6 +47,6 @@ try
 }
 catch (ex: any)
 {
-    root.Append("Błąd podczas ładowania treści")
-    console.error(ex.message)
+    root.Append("Błąd ładowania treści").Margin(32).TextAlignCenter();
+    console.error(ex.message);
 }

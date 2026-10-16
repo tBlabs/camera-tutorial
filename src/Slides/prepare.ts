@@ -55,11 +55,12 @@ Zadzwoń pod numer ☎️ 507-293-714 i umów się na spotkanie.`
 - Upewnij się, że wszystko jest naładowane:  
   - Twój telefon
   - Telefon pomocnika
+  - Laptop pomocnika oraz czy ma zapasowy
   - Pętla indukcyjna (to co zakłada się na szyje)
   - Powerbank do kamery
   - Pozostałe urządzenia
   - W słuchawce jest założona nowa bateria
-- Sprawdź czy masz wystarczającą ilość internetu w telefonie(jeśli korzystasz z kamery)
+- Sprawdź czy masz wystarczającą ilość internetu w telefonie (jeśli korzystasz z kamery)
 - Poproś kogoś o to by sprawdził czy słuchawki nie widać i nie słychać z zewnątrz kiedy jesteś z kimś na linii
 - Wchodząc na sale trzymaj w ręku kartkę, która będzie punktem odniesienia dla odbiorcy i gwarantem tego, że ostrość jest ok    
     `

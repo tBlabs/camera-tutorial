@@ -16,6 +16,9 @@ import { cleaning } from "./Slides/cleaning";
 import { usage } from "./Slides/usage";
 import { msProblems, msSlides } from "./Slides/ms";
 import { cameraProblems } from "./Slides/problems";
+import { checklists } from "./Slides/checklists";
+import { helper } from "./Slides/helper";
+import { microdisplay } from "./Slides/microdisplay";
 
 
 export const SLIDES: ISlideBase[] = [
@@ -37,4 +40,7 @@ export const SLIDES: ISlideBase[] = [
     ...charging,
     ...cleaning,
     ...usage,
+    ...checklists,
+    ...helper,
+    ...microdisplay,
 ]

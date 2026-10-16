@@ -6,6 +6,7 @@ export const start = [{
         { Label: "Pierwsze uruchomienie", Text: "Wybierze te opcje jeśli masz styczność z naszym sprzętem po raz pierwszy", ImageUrl: "unboxing.jpg", GoTo: "pierwsze-uruchomienie" },
         { Label: "Użytkowanie", Text: "Wskazówki na temat użytkowania, ukrywania, ładowania itp", ImageUrl: "usage.png", GoTo: "uzytkowanie" },
         { Label: "Rozwiązywanie problemów", Text: "Wybierze te opcje jeśli masz problem z którymś elementem zestawu", ImageUrl: "fixing.png", GoTo: "problem" },
+        { Label: "Checklisty", Text: "Co warto sprawdzić przed egzaminem", ImageUrl: "checklist.png", GoTo: "checklists" },
         { Label: "Inne kwestie", Text: "Dowiedz się o czym jeszcze warto pomyśleć lub jak zwrócić sprzęt", ImageUrl: "package.png", GoTo: "inne-sprawy" },
     ]
 },
@@ -18,6 +19,7 @@ export const start = [{
         { Label: "Mikrosłuchawkę", ImageUrl: "ms.jpeg", GoTo: "ms-start" },
         { Label: "Słuchawkę Nano", ImageUrl: "mag1.jpg", GoTo: "magnetic" },
         { Label: "Kamerę \"niewykrywalną\"", ImageUrl: "txbl.jpg", GoTo: "kamera-niewykrywalna" },
+        { Label: "Mikrowyswietlacz", ImageUrl: "md.jpg", GoTo: "mikrowyswietlacz" },
     ]
 },
 {
@@ -43,12 +45,13 @@ export const start = [{
     Options: [
         { Label: "Z kamerą", ImageUrl: "tx.jpg", GoTo: "problem-z-kamera" },
         { Label: "Ze słuchawką", ImageUrl: "ms.jpeg", GoTo: "problem-ze-sluchawka" },
+        { Label: "Z mikrowyświetlaczem", ImageUrl: "md.jpg", GoTo: "problemy-z-mikrowyswietlaczem" },
     ]
 },
 {
     Id: "inne-sprawy",
     Type: "choose",
-    Title: ``,
+    Title: `Inne sprawy`,
     Options: [
         { Label: "Przygotowanie telefonu", ImageUrl: "phone.jpg", GoTo: "jak-przygotowac-telefon" },
         { Label: "O czym warto pomyśleć", ImageUrl: "else.jpg", GoTo: "o-czym-jeszcze-warto-pomyslec" },
