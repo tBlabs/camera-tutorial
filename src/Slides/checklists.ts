@@ -2,48 +2,30 @@ export const checklists = [
     {
         Id: "checklists",
         Type: "choose",
-        Title: `Wybierz etap pracy`,
+        Title: "Jaka jest Twoja misja?",
         Options: [
-            { Label: "Przed akcją", Text: "Co koniecznie należy sprawdzić kiedy jest jeszcze czas", ImageUrl: "before.jpg", GoTo: "przed-akcja" },
-            { Label: "W dniu egzaminu", Text: "Najważniejsze rzeczy do sprawdzenia na chwile przed akcją", ImageUrl: "egzamin.jpg", GoTo: "chwile-przed-akcja" },
-            { Label: "Po akcji", Text: "Co zrobić po akcji", ImageUrl: "poegzaminie.jpg", GoTo: "po-akcji" },
+            { Label: "Wchodzę na salę", Text: "Sprawdź co musisz wiedzieć zanim zaczniesz", ImageUrl: "naegzaminie.jpg", GoTo: "klient" },
+            { Label: "Jestem pomocnikiem", Text: "Wskazówki dla Operatorów", ImageUrl: "operator.png", GoTo: "operator" },
         ]
     },
     {
-        Id: "przed-akcja",
+        Id: "klient",
         Type: "choose",
-        Title: `Jaka jest Twoja misja?`,
+        Title: "Wybierz etap pracy",
         Options: [
-            { Label: "Wchodzę na salę", Text: "Sprawdź co musisz wiedzieć zanim zaczniesz", ImageUrl: "naegzaminie.jpg", GoTo: "klient-przed-akcja" },
-            { Label: "Pomagam", Text: "Wytyczne dla Operatorów", ImageUrl: "operator.png", GoTo: "operator-przed-akcja" },
+            { Label: "Przed akcją", Text: "Co koniecznie należy sprawdzić kiedy jest jeszcze czas", ImageUrl: "before.jpg", GoTo: "klient-przed-akcja" },
+            { Label: "W dniu egzaminu", Text: "Najważniejsze rzeczy do sprawdzenia na chwile przed akcją", ImageUrl: "egzamin.jpg", GoTo: "klient-chwile-przed-akcja" },
+            { Label: "Po akcji", Text: "Co zrobić po akcji", ImageUrl: "poegzaminie.jpg", GoTo: "klient-po-akcji" },
         ]
     },
     {
-        Id: "chwile-przed-akcja",
+        Id: "operator",
         Type: "choose",
-        Title: `Jaka jest Twoja misja?`,
+        Title: "Wybierz etap pracy",
         Options: [
-            { Label: "Wchodzę na salę", Text: "Sprawdź co musisz sprawdzić na chwile przed wejściem na salę", ImageUrl: "naegzaminie.jpg", GoTo: "klient-chwile-przed-akcja" },
-            { Label: "Pomagam", Text: "Wytyczne dla Operatorów", ImageUrl: "operator.png", GoTo: "operator-chwile-przed-akcja" },
-        ]
-    },
-    {
-        Id: "po-akcji",
-        Type: "choose",
-        Title: `Kim byłeś?`,
-        Options: [
-            { Label: "Osobą na sali", Text: "Sprawdź co musisz zrobić po egzaminie", ImageUrl: "naegzaminie.jpg", GoTo: "klient-po-akcji" },
-            { Label: "Pomagaczem", Text: "Wytyczne dla Operatorów", ImageUrl: "operator.png", GoTo: "operator-po-akcji" },
-        ]
-    },
-    {
-        Id: "pomaganie",
-        Type: "choose",
-        Title: `W jaki sposób pomagasz?`,
-        Options: [
-            { Label: "Samodzielnie", Text: "Kiedy treścią zadań zajmujesz się Ty", ImageUrl: "naegzaminie.jpg", GoTo: "." },
-            { Label: "W grupie", Text: "Zasady współpracy dla większego zespołu", ImageUrl: "operator.png", GoTo: "glos" },
-            { Label: "Z chatem GPT", Text: "Kiedy treścią zadań zajmuje się AI", ImageUrl: "operator.png", GoTo: "glos" },
+            { Label: "Przed akcją", Text: "Co koniecznie należy sprawdzić kiedy jest jeszcze czas", ImageUrl: "before.jpg", GoTo: "operator-przed-akcja" },
+            { Label: "W dniu egzaminu", Text: "Najważniejsze rzeczy do sprawdzenia na chwile przed akcją", ImageUrl: "egzamin.jpg", GoTo: "operator-chwile-przed-akcja" },
+            { Label: "Po akcji", Text: "Co zrobić po akcji", ImageUrl: "poegzaminie.jpg", GoTo: "operator-po-akcji" },
         ]
     },
     {
@@ -51,15 +33,16 @@ export const checklists = [
         Type: "page",
         Content: `### O co warto zadbać co najmniej dzień przed egzaminem
 
-- Bezwzględnie musisz dokładnie znać całą instrukcję użytkowania
-- Zrobić pełny test pracy pod kątem wymaganego czasu i obciążenia Twojego telefonu
-- Musisz też poćwiczyć komunikację ze swoim Operatorem
-- Wiedzieć jak naładować sprzęt 
-- Sprawdzić czy na sali jest zasięg sieci
-- Upewnij się czy Twój telefon nie robi dziwnych rzeczy: np. nie ustawia maksymalnej głośności przy każdym nowym połączeniu albo automatycznie nie wyłącza hotspota
-- Upewnić się, że na sali nie będzie zagłuszarek albo skanerów
+Pełne przygotowanie to gwarancja spokoju. W trakcie egzaminu nie ma miejsca na niepewność czy testowanie sprzętu. Oto lista rzeczy, które polecamy zrobić póki jest na to czas:
 
-Pełne przygotowanie to gwarancja spokoju. W trakcie egzaminu nie ma miejsca na niepewność czy testowanie sprzętu. Postępuj ściśle według powyższego schematu - każdy krok został zaplanowany tak, aby zapewnić Ci 100% dyskrecji, niezawodności i pełne wsparcie na każdym etapie
+- [x] *Przeczytać cały ten samouczek*
+- [x] *Zrobić test czasu pracy*- włącz wszystko i zosta na kilka godzin. Upewnij się, że żadna bateria nie padła i nic się nie przegrzewa
+- [x] *Poćwicz komunikację* ze swoim Operatorem - wydrukuj sobie to co będziesz zdawał i zobaczcie jak idzie wam współpraca
+- [x] Sprawdź jak naładować sprzęt - wszystko jest opisane w tym samouczku
+- [x] *Sprawdzić czy na sali jest zasięg sieci* - idź tam dzień wcześniej i zobacz czy masz łączność
+- [x] Upewnij się czy Twój telefon nie robi dziwnych rzeczy: np. nie ustawia maksymalnej głośności przy każdym nowym połączeniu albo automatycznie nie wyłącza hotspota
+- [x] Upewnij się, że na sali nie będzie zagłuszarek albo skanerów. Jeśli będą - miej plan B
+
 `
     },
     {
@@ -77,7 +60,7 @@ Pełne przygotowanie to gwarancja spokoju. W trakcie egzaminu nie ma miejsca na 
 - Miej awaryjne łącze internetowe, np w postaci routera z telefonu
 - Warto też mieć kartę SIM innego operatora w razie jakby Twój akurat padł
 
-Podsumowując: Wszystko powinno być zdublowane. Dwa komputery, dwa telefony, w dwóch różnych sieciach. Pracuj z miejsca gdzie jest dobry zasięg.
+Podsumowując: Wszystko powinno być zdublowane. Dwa komputery, dwa telefony, w dwóch różnych sieciach. Pracuj z miejsca gdzie jest dobry zasięg. Upewnij się, że wszystko jest naładowane i nie zabraknie Ci internetu.
 `
     }, 
     {
@@ -85,25 +68,25 @@ Podsumowując: Wszystko powinno być zdublowane. Dwa komputery, dwa telefony, w 
         Type: "page",
         Content: `### Oto co musisz zrobić przed wejściem na salę:
 
-Przygotuj słuchawkę:  
-- Wyczyść ucho przed włożeniem słuchawki
-- Załóż nową baterię do słuchawki
-- Włącz pętle bluetooth i upewnij się, że jest połączona z telefonem
-- Upewnij się, że masz zasięg pod salą
-- Połącz się co najmniej 20 minut wcześniej i pochodź po okolicy
-- Upewnij się że głośność w słuchawce nie jest za duża i że nie słychać Twojego rozmówcy na zewnątrz
+Przygotuj **słuchawkę**:  
+- [x] Wyczyść ucho przed włożeniem słuchawki
+- [x] Załóż nową baterię do słuchawki
+- [x] Włącz pętle bluetooth i upewnij się, że jest połączona z telefonem
+- [x] Upewnij się, że masz zasięg pod salą
+- [x] Połącz się co najmniej 20 minut wcześniej i pochodź po okolicy
+- [x] Upewnij się że głośność w słuchawce nie jest za duża i że nie słychać Twojego rozmówcy na zewnątrz
 
-Jeśli korzystasz z kamery:  
-- Włącz transmisję danych w telefonie
-- Włącz hotspota i nie wychodź z ekranu hotspota póki nie uruchomisz kamery
-- Nie dotykaj guzika od Wifi 
-- Sprawdź stan naładowania powerbanka
-- Podłącz kamerę do powerbanka i odczekaj minutę, upewnij się że na kamerze miga zielona dioda
-- Bądź na linii ze swoim Operatorem i upewnij się, że wszystko widzi i słyszy
+Jeśli korzystasz z **kamery**:  
+- [x] Włącz transmisję danych w telefonie
+- [x] Włącz hotspota i nie wychodź z ekranu hotspota póki nie uruchomisz kamery
+- [x] Nie dotykaj guzika od Wifi 
+- [x] Sprawdź stan naładowania powerbanka
+- [x] Podłącz kamerę do powerbanka i odczekaj minutę, upewnij się że na kamerze miga zielona dioda
+- [x] Bądź na linii ze swoim Operatorem i upewnij się, że wszystko widzi i słyszy
 
-Jeśli dodatkowo korzystasz z mikrowyświetlacza:  
-- Upewnij się, że jest naładowany i połączony z Twoim telefonem
-- Sprawdź ubranie i mocowanie urządzenia
+Jeśli dodatkowo korzystasz z **mikrowyświetlacza**:  
+- [x] Upewnij się, że jest naładowany i połączony z Twoim telefonem
+- [x] Sprawdź ubranie i mocowanie urządzenia
 
 Wskazówka strategiczna:
 - Zalecamy popełnienie 2-3 celowych błędów, aby ostateczny wynik nie wyglądał podejrzanie (100% poprawnych odpowiedzi może budzić niepotrzebne wątpliwości).
@@ -129,12 +112,12 @@ Przygotuj połączenie głosowe:
 - Porozmawiaj z osobą na sali - upewnij się że słyszycie się nawzajem
 - Korzystaj z formuły: A jak Alicja, B jak Barbara itd
 - Po podyktowaniu następuje 1-2 sekundy pauzy
-- Cisza z Twojej strony →  Przechodzimy do następnego zadania
-- Uzgodniony dźwięk →  Odpowiedź zostanie podyktowana ponownie
+- Cisza z Twojej strony → Przechodzimy do następnego zadania
+- Uzgodniony dźwięk → Odpowiedź zostanie podyktowana ponownie
 
 Pamiętaj:
-- Osoba na sali nie jest w stanie nic powiedzieć
-- Jeśli ustaliliście jakiś sygnał na np. odgłos kaszlnięcia to weźcie poprawkę na to że ktoś inny na sali może wydać taki dźwięk, dlatego za każdym razem proś o potwierdzenie
+- Osoba na sali nie jest w stanie nic powiedzieć, nie zadawaj jej pytań w stylu "Czy mnie słyszysz" bo i tak Ci nie odpowie
+- Jeśli ustaliliście jakiś sygnał na np. odgłos kaszlnięcia to weźcie poprawkę na to że ktoś inny na sali może wydać taki sam dźwięk, dlatego za każdym razem proś o potwierdzenie
 
 Jeśli korzystacie dodatkowo z kamery:  
 - Otwórz stronę z podglądem i czekaj na obraz ([watcher.specteam.pl](https://watcher.specteam.pl))
@@ -154,14 +137,15 @@ Jeśli używacie mikrowyświetlacza:
         Type: "page",
         Content: `### Oto co musisz zrobić po egzaminie:
 
-- Wyjmij słuchawkę z ucha i przetrzyj ją chusteczką higieniczną, nie używaj żadnej chemii ani wody
-- Wyjmij baterię ze słuchawki
-- Zakręć słuchawkę i schowaj ją do etui
-- Odłącz powerbank od kamery
-- Wyłącz pętle bluetooth
-- Jeśli jakieś elementy zestawu zostały oklejone taśmą - nie musisz jej usuwać ani czyścić po niej śladów. My się tym zajmiemy.
-- Zapakuj wszystkie elementy zestawu do etui łącznie z ładowarką i kablem USB do ładowania
-- Dane do zwrotu znajdziesz w swoim zamówieniu ([shop.specteam.pl](https://shop.specteam.pl))
+- [x] Wyjmij słuchawkę z ucha i przetrzyj ją chusteczką higieniczną, nie używaj żadnej chemii ani wody
+- [x] Wyjmij baterię ze słuchawki
+- [x] Zakręć słuchawkę i schowaj ją do etui
+- [x] Odłącz powerbank od kamery
+- [x] Wyłącz pętle bluetooth
+- [x] Jeśli jakieś elementy zestawu zostały oklejone taśmą - nie musisz jej usuwać ani czyścić po niej śladów. My się tym zajmiemy.
+- [x] Zapakuj wszystkie elementy zestawu do etui łącznie z ładowarką i kablem USB do ładowania
+- [x] Dane do zwrotu znajdziesz w swoim zamówieniu ([shop.specteam.pl](https://shop.specteam.pl))
+- [x] Jak już otrzymasz wyniki to daj nam znać sms'em ;)
 `
     },
     {
@@ -169,7 +153,8 @@ Jeśli używacie mikrowyświetlacza:
         Type: "page",
         Content: `### Oto co musisz zrobić po egzaminie:
 
-Zasadniczo nic nie musisz robić, ale jeśli chcecie zachować stopklatki to warto je zapisać na własnym komputerze. Na serwerze będą przechowywane tylko przez kilka dni.
+Zasadniczo nic nie musisz robić, ale jeśli chcecie zachować stopklatki to warto je zapisać na własnym komputerze. Na serwerze będą przechowywane tylko przez kilka dni.  
+Jeśli korzystaliście z Chata to warto go zapisać lub usunąć. Wedle uznania.
 `
     },
 ];

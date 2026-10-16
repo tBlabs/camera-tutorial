@@ -14,7 +14,7 @@ export const helper = [
         Content: `### Zasady dla klienta
 
 Jako osoba wchodząca na salę masz stosunowo proste zadanie:  
-Wejść, wycelować kamerą w kartkę i się nie ruszać
+Wejść, wykonywać polecenia Operatora i się nie ruszać :)
 `
     },
     {
